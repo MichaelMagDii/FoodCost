@@ -77,7 +77,6 @@ namespace Food_Cost
         {
             string Where = "";
             DataTable DT = new DataTable();
-            DT.Columns.Add("Checked", typeof(bool));
             DT.Columns.Add("Code");
             DT.Columns.Add("Manual Code");
             DT.Columns.Add("Name");
@@ -95,7 +94,7 @@ namespace Food_Cost
                 {
                     if(Convert.ToDouble(ItemQtyCost.Rows[0][0].ToString())>0 && Convert.ToDouble(ItemQtyCost.Rows[0][1].ToString())>0)
                     {
-                        DT.Rows.Add(false, ItemsInfo.Rows[i][0], ItemsInfo.Rows[i][1], ItemsInfo.Rows[i][2], (Convert.ToDouble(ItemQtyCost.Rows[0][0]) * Convert.ToDouble(ItemsInfo.Rows[i][4])), ItemsInfo.Rows[i][3], ItemQtyCost.Rows[0][1]);
+                        DT.Rows.Add( ItemsInfo.Rows[i][0], ItemsInfo.Rows[i][1], ItemsInfo.Rows[i][2], (Convert.ToDouble(ItemQtyCost.Rows[0][0]) * Convert.ToDouble(ItemsInfo.Rows[i][4])), ItemsInfo.Rows[i][3], ItemQtyCost.Rows[0][1]);
                     }
                 }
             }
@@ -103,7 +102,6 @@ namespace Food_Cost
             {
                 DT.Columns[i].ReadOnly = true;
             }
-            DT.Columns["Checked"].ReadOnly = false;
             ItemsDGV.DataContext = DT;
         }           //Doen Finall Function
 
@@ -120,6 +118,7 @@ namespace Food_Cost
 
         private void ItemsDGV_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+            //Michael's Update
             string Where = "";
             DataTable ItemsInfo = new DataTable();
             DataTable BulkItems = new DataTable();
@@ -129,6 +128,21 @@ namespace Food_Cost
             DT.Columns.Add("Name");
             DT.Columns.Add("Weight Precentage");
             DT.Columns.Add("Cost Precentage");
+            DT.Columns.Add("Weight");
+            DT.Columns.Add("Cost");
+            DataGrid grid = sender as DataGrid;
+            if(grid != null && grid.SelectedItems != null && grid.SelectedItems.Count ==1)
+            {
+
+            }
+            else
+            {
+                ItemsofBulkItemsDGV.Visibility = Visibility.Hidden;
+
+            }
+
+
+            //
             ItemsofBulkItemsDGV.Visibility = Visibility.Visible;
             DataGrid grid = sender as DataGrid;
             if (grid != null && grid.SelectedItems != null && grid.SelectedItems.Count == 1)

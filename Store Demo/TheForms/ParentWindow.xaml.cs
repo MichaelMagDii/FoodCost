@@ -36,7 +36,7 @@ namespace Food_Cost
         {
             string Where = ""; DataTable ParentsItems = new DataTable();
             Where = string.Format("Parent_Item='{0}'", Code);
-            ParentsItems = Classes.RetrieveData("Code,(Select Name From Setup_Items Where Code=Setup_ParentItems.Code)", Where, "Setup_ParentItems");
+            ParentsItems = Classes.RetrieveData("Code,(Select Name From Setup_Items Where Code=Setup_ParentItems.Code) Name", Where, "Setup_ParentItems");
             ParentItemsDGV.DataContext = ParentsItems;
         }           //Done FInall Function
         private void AddBtn_Click(object sender, RoutedEventArgs e)
@@ -55,6 +55,7 @@ namespace Food_Cost
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
             DataTable DT = ParentItemsDGV.DataContext as DataTable;
+
             DT.Rows.RemoveAt(ParentItemsDGV.SelectedIndex);
             ParentItemsDGV.DataContext = DT;
         }           //Done
@@ -71,14 +72,6 @@ namespace Food_Cost
             }
             MessageBox.Show("Saved Sucsseful");
         }
-
-
-        //
-
-
-
-
-
         private void ItemsDGV_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             DataGrid grid = sender as DataGrid;
@@ -102,6 +95,7 @@ namespace Food_Cost
                 }
             }
         }           //Done Finall Function
+
         private void LoadToDGVOfBulkItems(string code)
         {
             //Michael's Update
@@ -110,8 +104,8 @@ namespace Food_Cost
             ParentsItems = ((DataTable)ParentItemsDGV.DataContext);
             Where = string.Format("Code='{0}'", code);
             ParentItemsInfos = Classes.RetrieveData("Code,Name", Where, "Setup_Items");
-            ParentItemsInfos.Rows.Add(ParentItemsInfos.Rows[0][0], ParentItemsInfos.Rows[0][1]);
-            ParentItemsDGV.DataContext = ParentItemsInfos;
+            ParentsItems.Rows.Add(ParentItemsInfos.Rows[0][0], ParentItemsInfos.Rows[0][1]);
+            ParentItemsDGV.DataContext = ParentsItems;
         }               //DOne
         private void SearchTxt_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -136,6 +130,12 @@ namespace Food_Cost
             }
             ItemsDGV.DataContext = AllItems;
         }
+
+        private void BackClickBtn(object sender, RoutedEventArgs e)
+        {
+            AllItemsView.Visibility = Visibility.Hidden;
+            ParentItemsDGV.Visibility = Visibility.Visible;
+        }       //Done
     }
 }
 

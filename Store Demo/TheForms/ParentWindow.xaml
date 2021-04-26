@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Food_Cost"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="ParentWindow" Height="600" Width="650">
+    
     <Grid>
         <Grid Name="AllItemsView" Visibility="Hidden">
             <Grid.RowDefinitions>
@@ -28,7 +29,7 @@
 
             <DataGrid  x:Name="ItemsDGV" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" ColumnWidth="*" VerticalAlignment="Stretch"  ScrollViewer.CanContentScroll="True" 
                           ScrollViewer.VerticalScrollBarVisibility="Auto"  ScrollViewer.HorizontalScrollBarVisibility="Auto" IsReadOnly="True"
-                           MouseDoubleClick="ItemsDGV_MouseDoubleClick" Visibility="Hidden"/>
+                           MouseDoubleClick="ItemsDGV_MouseDoubleClick" />
 
             <Button Grid.Row="2" Background="Gray"  Margin="5" Click="BackClickBtn">
                 <StackPanel Orientation="Horizontal" >
