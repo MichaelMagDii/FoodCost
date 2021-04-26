@@ -1,0 +1,144 @@
+﻿<UserControl x:Class="Food_Cost.Users"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Store_Demo"
+             mc:Ignorable="d" 
+              Width="auto"
+             Height="auto"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+    
+    
+    <ScrollViewer>
+        <Border Padding="10" Background="White">
+            <StackPanel>
+
+                <Grid Margin="0 80 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="1">
+                        <materialDesign:PackIcon Kind="AccountMultiple" Foreground="#566573" Height="24" Width="24" Margin="3 40 3 3"/>
+
+                        <GroupBox Foreground="Black" VerticalAlignment="Stretch"  Name="FloorGBX" Margin="0 0 15 0"  BorderBrush="#D0D3D4" BorderThickness="2" Padding="18" Header="New User" FontSize="18">
+                            <StackPanel>
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel>
+                                        <TextBlock FontWeight="Bold" Padding="1" Text="User ID" FontSize="14" Foreground="#FFCD0E0E" />
+                                        <TextBox x:Name="userIDtxt" Padding="1" FontSize="13" Margin="0,0,0,15"/>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="1">
+                                        <CheckBox Content="Active" Name="Active_chbx" Margin="30 20 0 0" HorizontalAlignment="Left" Foreground="Green" FontWeight="Medium" />
+                                    </StackPanel>
+
+                                </Grid>
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel  Grid.Column="0" Margin="0 0 0 0" >
+
+                                        <TextBlock FontWeight="Bold"  Foreground="#FFCD0E0E" Text="Name" Margin="0 0" FontSize="14" />
+                                        <TextBox Name="Nametxt" Padding="1" FontSize="13" Margin="0 0 0 15"/>
+
+                                        <TextBlock FontWeight="Bold"  Foreground="#FFCD0E0E" Text="User Name" Margin="0 0" FontSize="14" />
+                                        <TextBox Name="UserNametxt" Padding="1" FontSize="13" Margin="0 0 0 15"/>
+
+                                        <TextBlock FontWeight="Bold"  Foreground="#FFCD0E0E" Text="Password" Margin="0 0" FontSize="14" />
+                                        <PasswordBox Name="passwordtxt" Padding="1" FontSize="13" Margin="0 0 0 15" />
+
+                                        <TextBlock FontWeight="Bold"  Foreground="#FFCD0E0E" Text="Job Title" Margin="0 0" FontSize="14" />
+                                        <ComboBox Name="jobTitle" FontSize="22" Margin="0 0 0 15"  IsReadOnly="True" RenderTransformOrigin="0.5,0.5" FontFamily="Corbel" FontStyle="Italic" IsEditable="True">
+                                            <ComboBox.RenderTransform>
+                                                <TransformGroup>
+                                                    <ScaleTransform/>
+                                                    <SkewTransform/>
+                                                    <RotateTransform/>
+                                                    <TranslateTransform Y="8"/>
+                                                </TransformGroup>
+                                            </ComboBox.RenderTransform>
+                                        </ComboBox>
+                                        <TextBlock FontWeight="Bold"  Foreground="#FFCD0E0E" Text="Phone Number" Margin="0 0" FontSize="14" />
+                                        <TextBox Name="phone" Padding="1" FontSize="13" Margin="0 0 0 15"/>
+
+
+                                        <TextBlock FontWeight="Bold"  Foreground="#FFCD0E0E" Text="Address" Margin="0 0" FontSize="14" />
+                                        <TextBox Name="Addresstxt" Padding="1" FontSize="13" Margin="0 0 0 15"/>
+
+                                        <TextBlock FontWeight="Bold"  Foreground="#FFCD0E0E" Text="Mail" Margin="0 0" FontSize="14" />
+                                        <TextBox Name="Mailtxt" Padding="1" FontSize="13" Margin="0 0 0 15"/>
+                                    </StackPanel>
+
+
+                                </Grid>
+                                <Grid Margin="0 20 0 0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+
+                                        <ColumnDefinition Width="0"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Button Grid.Column="1" Name="newBtn"  Foreground="Black" Background="#cacfd2" FontSize="12" Padding="0" Margin="0,0,10.2,0" Height="32" VerticalAlignment="Top" Click="NewBtn_Click">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0">
+                                            <materialDesign:PackIcon Kind="Plus" HorizontalAlignment="Left" Width="20"/>
+                                            <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> New</TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Name="saveBtn" Grid.Column="2"   Background="Green" FontSize="12" Padding="2" Margin="0 0 10 0" Click="SaveBtn_Click">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"   Margin="0">
+                                            <materialDesign:PackIcon Kind="CheckboxMarkedCircle" HorizontalAlignment="Left" Width="20" Height="20"/>
+                                            <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> Save</TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Name="UpdateBtn" Grid.Column="3"   Background="Green" FontSize="12" Padding="2" Margin="0 0 10 0" Click="UpdateBtn_Click">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"   Margin="0">
+                                            <materialDesign:PackIcon Kind="ArrowDown" HorizontalAlignment="Left"  />
+                                            <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> Update</TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Name="UndoBtn" Grid.Column="4" FontSize="12" Padding="2" Margin="0.4,0,9.8,0" Height="32" VerticalAlignment="Top" Click="UndoBtn_Click" >
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"   Margin="0">
+                                            <materialDesign:PackIcon Kind="Undo" HorizontalAlignment="Left" />
+                                            <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> Undo</TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Name="DeleteBtn" Grid.Column="5"  Foreground="White" Background="#cb4335" FontSize="12" Padding="0" Margin="0 0 10 0" Click="DeleteBtn_Click">
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"   Margin="0">
+                                            <materialDesign:PackIcon Kind="Delete" HorizontalAlignment="Left" />
+                                            <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> Delete</TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </Grid>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+
+                    <StackPanel  Grid.Column="2" Height="auto"  >
+                        <materialDesign:PackIcon Kind="KeyVariant"  Height="40" Width="60"  HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="#FF989895" ToolTip="Double Click To Manage Users Authentication" MouseDoubleClick="PackIcon_MouseDoubleClick"/>
+
+                        <TextBlock Text="Users" Margin="0 0"   FontWeight="Bold" Foreground="#566573" FontSize="15"  />
+                        <DataGrid  Name="UsersDGV" ItemsSource="{Binding}"   AutoGenerateColumns="True"  ColumnWidth="*" ScrollViewer.CanContentScroll="True" 
+                          ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" Padding="0 0 0 30" IsReadOnly="True"
+                           MouseLeftButtonUp="RowClicked">
+                        </DataGrid>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </ScrollViewer>
+</UserControl>

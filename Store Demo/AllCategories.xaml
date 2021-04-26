@@ -1,0 +1,43 @@
+﻿<Window x:Class="Food_Cost.AllCategories"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Food_Cost"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="AllCategories" Height="450" Width="800">
+
+    <Grid Name="parentdrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <materialDesign:PackIcon Grid.Column="0" Kind="Category" Foreground="#566573" Height="28" Width="30" Margin="3"/>
+            <TextBlock Text="Categories" Margin="0 5"  Grid.Column="1" FontWeight="Bold" Foreground="#566573" FontSize="15"  />
+            <TextBlock Text="Search" Margin="0 5"  Grid.Column="2" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#566573" FontSize="15"  />
+            <TextBox Name="SearchTxt" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="12" TextChanged="TextDataChange"  ></TextBox>
+            <RadioButton Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Name="RadioByCode">By Code</RadioButton>
+            <RadioButton Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Name="RadioByName">By Name</RadioButton>
+        </Grid>
+
+        <DataGrid  Name="CategoryDGV" Grid.Row="1" ItemsSource="{Binding}" AutoGenerateColumns="True" VerticalAlignment="Stretch" ScrollViewer.CanContentScroll="True"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" MouseDoubleClick="MouseDoubleClick_click"
+                           CanUserAddRows="False">
+        </DataGrid>
+
+    </Grid>
+</Window>

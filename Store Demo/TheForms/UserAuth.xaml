@@ -1,0 +1,342 @@
+﻿<Window x:Class="Food_Cost.UserAuth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Store_Demo"
+        mc:Ignorable="d" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="User Authentication" Height="700" Width="700"  WindowStartupLocation="CenterScreen">
+    
+    <ScrollViewer>
+        <Grid Background="#FFEEEEEE">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1">
+            <materialDesign:PackIcon Kind="AccountMultiple" Foreground="#566573" Height="24" Width="24" Margin="3"/>
+
+            <GroupBox Foreground="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Name="FloorGBX" Margin="0 0 20 0"  BorderBrush="#D0D3D4" BorderThickness="2" Padding="10" Header="New User Class" FontSize="18">
+                <StackPanel>
+                    <Grid Margin="0 20 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Margin="0 0 0 0" Grid.Column="0">
+                            <TextBlock FontWeight="Bold" Text="UserClassID" Margin="0" FontSize="14" Foreground="#FFCD0E0E"/>
+                            <TextBox Name="UserClassIDtxt" Padding="1" FontSize="13" IsReadOnly="True" />
+                        </StackPanel>
+
+                        <StackPanel  Grid.Column="1" Margin="0 0 10 18" >
+                            <CheckBox Name="Active_chbx" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,5,-0.8,0">
+                                <TextBlock FontSize="14" > <Run Foreground="Green" FontWeight="Bold">Active</Run>
+                                </TextBlock>
+                            </CheckBox>
+                        </StackPanel>
+
+                    </Grid>
+                    <Grid Margin="0 40 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+                        <StackPanel  Grid.Column="0" Margin="0 0 0 0" >
+                            <TextBlock FontWeight="Bold"  Foreground="#FFCD0E0E" Text="User Class (ex: Admin)" Margin="0 0" FontSize="14" />
+                            <TextBox Name="Nametxt" Padding="1" FontSize="13" Margin="0 10"/>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Margin="0 35 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+
+                            <ColumnDefinition Width="0"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+
+                        <Button Grid.Column="0" Foreground="Black" Background="#cacfd2" FontSize="12" Padding="0 0 0 0" Margin="-5,0,10,0.2" Name="NewBtn" Height="Auto" Click="NewBtn_Click">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0">
+                                <materialDesign:PackIcon Kind="Plus" HorizontalAlignment="Left" Width="20"/>
+                                <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> New</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="saveBtn" Background="Green" FontSize="12" Padding="2" Margin="52,0,4.6,0.2" Grid.ColumnSpan="2" Click="SaveBtn_Click">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"   Margin="0">
+                                <materialDesign:PackIcon Kind="CheckboxMarkedCircle" HorizontalAlignment="Left" Width="20" Height="20"/>
+                                <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> Save</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="UpdateBtn" Grid.Column="2"   Background="Green" FontSize="12" Padding="2" Margin="0,0,50.2,0" Grid.ColumnSpan="2" VerticalAlignment="Top" Click="UpdateBtn_Click">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"   Margin="0">
+                                <materialDesign:PackIcon Kind="ArrowDown" HorizontalAlignment="Left"  />
+                                <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> Update</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Grid.Column="3" FontSize="12" Padding="2" Margin="10.6,0,51.2,0.2" Grid.ColumnSpan="2" Name="UndoBtn" Click="UndoBtn_Click">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"   Margin="0">
+                                <materialDesign:PackIcon Kind="Undo" HorizontalAlignment="Left" />
+                                <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> Undo</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="DeleteBtn" Grid.Column="4"  Foreground="White" Background="#cb4335" FontSize="12" Padding="0" Margin="9.6,0,-9.8,0.2" Grid.ColumnSpan="2" Click="DeleteBtn_Click">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"   Margin="0">
+                                <materialDesign:PackIcon Kind="Delete" HorizontalAlignment="Left" />
+                                <TextBlock Padding="0" Margin="0" HorizontalAlignment="Right"> Delete</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+
+        <StackPanel  Grid.Column="2" Name="PrivillageStackPanel" Height="650" VerticalAlignment="Top" >
+            <TextBlock Text="User Classes" FontWeight="Bold" Foreground="#566573" FontSize="15" Name="Justtxt" />
+
+                <Button Name="Backbtn" Foreground="White" Background="DimGray" FontSize="10" HorizontalAlignment="Right" Click="Backbtn_Click" Visibility="Hidden">
+                    <StackPanel Orientation="Horizontal">
+                        <materialDesign:PackIcon Kind="KeyboardReturn"/>
+                        <Label HorizontalAlignment="Right" x:Name="Back" Content="Back"/>
+                    </StackPanel>
+                </Button>
+            
+                <Grid Background="White" Height="700">
+
+                <ListView Background="White" VerticalAlignment="Top" Height="600" Name="ListBox_UserPrivileges" Visibility="Hidden">
+                        <CheckBox Name="SelectAll" Checked="SelectAll_Checked" Unchecked="SelectAll_Unchecked" VerticalAlignment="Top">Select All</CheckBox>
+
+                    <TreeViewItem Header="Purchase Order" HorizontalAlignment="Left" IsSelected="False" Name="Purchase">
+                        <CheckBox Name="CheckAllPO" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="SearchPO" Content="Search" Tag="1"/>
+                        <CheckBox Name="CopyPO" Content="Copy" Tag="1"/>
+                        <CheckBox Name="NewPO" Content="New" Tag="1"/>
+                        <CheckBox Name="OrderPO" Content="Order" Tag="1"/>
+                        <CheckBox Name="Undo" Content="Undo" Tag="1"/>
+                        <CheckBox Name="AddItemPO" Content="Add Item" Tag="1"/>
+                        <CheckBox Name="RemoveItemPO" Content="Remove Item" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Recieve Order" HorizontalAlignment="Left" IsSelected="False" Name="Recieve">
+                        <ListView Background="White" Name="RecieveOrder_List">
+                            <TreeViewItem Header="Recieve Purchase" HorizontalAlignment="Left" IsSelected="False" Name="RecievePO" Tag="2">
+                                <CheckBox Name="CheckAllROPO" Tag="2">Check All</CheckBox>
+                                <CheckBox Name="RecieveROPO" Content="Recieve" Tag="2"/>
+                            </TreeViewItem>
+
+                            <TreeViewItem Header="Recieve Kitchen Transfer" HorizontalAlignment="Left" IsSelected="False" Name="RecieveReturantTrnsfer">
+                                <CheckBox Name="CheckAllROResturant" Tag="1">Check All</CheckBox>
+                                <CheckBox Name="SearchROResturant" Content="Search" Tag="1"/>
+                                <CheckBox Name="RecieveROResturant" Content="Copy" Tag="1"/>
+                                <CheckBox Name="EditROResturant" Content="Edit" Tag="1"/>
+                                <CheckBox Name="UndoROResturant" Content="Undo" Tag="1"/>
+                                <CheckBox Name="CancelROResturant" Content="Cancel" Tag="1"/>
+                            </TreeViewItem>
+
+                            <TreeViewItem Header="Recieve Kitchen Transfer" HorizontalAlignment="Left" IsSelected="False" Name="RecieveKitchen">
+                                <CheckBox Name="CheckAllROKitchen" Tag="1">Check All</CheckBox>
+                                <CheckBox Name="SearchROKitchen" Content="Search" Tag="1"/>
+                                <CheckBox Name="RecieveROKitchen" Content="Copy" Tag="1"/>
+                                <CheckBox Name="EditROKitchen" Content="Edit" Tag="1"/>
+                                <CheckBox Name="UndoROKitchen" Content="Undo" Tag="1"/>
+                                <CheckBox Name="CancelROKitchen" Content="Cancel" Tag="1"/>
+                            </TreeViewItem>
+
+                            <TreeViewItem Header="Recieve Without Purchase" HorizontalAlignment="Left" IsSelected="False" Name="RecieveWithoutPurchse">
+                                <CheckBox Name="CheckAllROWithout" Tag="1">Check All</CheckBox>
+                                <CheckBox Name="SearchROWithout" Content="Search" Tag="1"/>
+                                <CheckBox Name="RecieveROWithout" Content="Recieve" Tag="1"/>
+                                <CheckBox Name="EditROWithout" Content="Edit" Tag="1"/>
+                                <CheckBox Name="UndoROWithout" Content="Undo" Tag="1"/>
+                                <CheckBox Name="CancelROWithout" Content="Cancel" Tag="1"/>
+                            </TreeViewItem>
+
+                                <TreeViewItem Header="Requests" HorizontalAlignment="Left" IsSelected="False" Name="Request">
+                                    <CheckBox Name="CheckAllRequests" Tag="1">Check All</CheckBox>
+                                    <CheckBox Name="Requests" Content="Recieve" Tag="1"/>
+                                </TreeViewItem>
+
+                            </ListView>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Transfer Resturant" HorizontalAlignment="Left" IsSelected="False" Name="TransferResturant">
+                        <CheckBox Name="CheckAllTransferResturant" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="SearchTransferResturant" Content="Search" Tag="1"/>
+                        <CheckBox Name="TransferTrnsferResturant" Content="Transfer" Tag="1"/>
+                        <CheckBox Name="unodTransferResturant" Content="Undo" Tag="1"/>
+                        <CheckBox Name="AddItemTransferReasturant" Content="Add Item" Tag="1"/>
+                        <CheckBox Name="RemoveItemTransferResturant" Content="Remove Item" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Transfer Kitchen" HorizontalAlignment="Left" IsSelected="False" Name="TransferKitchen">
+                        <CheckBox Name="CheckAllTransferKitchen" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="SearchTransferKitchen" Content="Search" Tag="1"/>
+                        <CheckBox Name="TransferTrnsferKitchen" Content="Transfer" Tag="1"/>
+                        <CheckBox Name="unodTransferKitchen" Content="Undo" Tag="1"/>
+                        <CheckBox Name="AddItemTransferKitchen" Content="Add Item" Tag="1"/>
+                        <CheckBox Name="RemoveItemTransferKitchen" Content="Remove Item" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Resturants" HorizontalAlignment="Left" IsSelected="False" Name="Resturants">
+                        <CheckBox Name="CheckAllResturants" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NewResturants" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveResturants" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateResturants" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoResturants" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteResturants" Content="Delete Resturants" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Kitchens" HorizontalAlignment="Left" IsSelected="False" Name="Kitchens">
+                        <CheckBox Name="CheckAllKitchens" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NewKitchens" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveKitchens" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateKitchens" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoKitchens" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteKitchens" Content="Delete Kitchens" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Items" HorizontalAlignment="Left" IsSelected="False" Name="Items">
+                        <CheckBox Name="CheckAllItems" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="AddItems" Content="Add Items" Tag="1"/>
+                        <CheckBox Name="DeleteItems" Content="Delete" Tag="1"/>
+                        <CheckBox Name="SaveItems" Content="Save Items" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Recipes" HorizontalAlignment="Left" IsSelected="False" Name="Recipes">
+                        <CheckBox Name="CheckAllRecipes" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="SearchRecipes" Content="Search" Tag="1"/>
+                        <CheckBox Name="ReNewRecipes" Content="ReNew" Tag="1"/>
+                        <CheckBox Name="NewRecipes" Content="New Recipes" Tag="1"/>
+                        <CheckBox Name="SaveRecipes" Content="Save" Tag="1"/>
+                        <CheckBox Name="Edit" Content="Edit Recipes" Tag="1"/>
+                        <CheckBox Name="undoRecipes" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteRecipes" Content="Delete" Tag="1"/>
+                        <CheckBox Name="RemoveItemRecipes" Content="RemoveItemRecipes" Tag="1"/>
+                        <CheckBox Name="AddRecipes" Content="Add Sub Recipes" Tag="1"/>
+                        <CheckBox Name="AddItemRecipes" Content="Add Recipe Item" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Generate Recipes" HorizontalAlignment="Left" IsSelected="False" Name="GenerateBatch">
+                        <CheckBox Name="CheckAllGenerateBatch" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="GenertaeGenerate" Content="Genertae Recipe" Tag="1"/>
+                        <CheckBox Name="OrderRequesationGenerate" Content="Order Requesation" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Kitchen Items" HorizontalAlignment="Left"  IsSelected="False" Name="KitchenItems">
+                        <CheckBox Name="CheckAllKitchenItems" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="AddKitchenItems" Content="Add Items" Tag="1"/>
+                        <CheckBox Name="SaveKitchenItems" Content="Save" Tag="1"/>
+                        <CheckBox Name="DeleteKitchenItems" Content="Delete" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Recipe Category and Sub Category" HorizontalAlignment="Left" IsSelected="False" Name="RecipeCategoryAndSub">
+                        <CheckBox Name="CheckAllRecipeCategory" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NeRecipeCategory" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveRecipeCategory" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateRecipeCategory" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoRecipeCategory" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteRecipeCatgoey" Content="Delete Category" Tag="1"/>
+                        <CheckBox Name="CheckAllRecipeSubCategory" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NeRecipeSubCategory" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveRecipeSubCategory" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateRecipeSubCategory" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoRecipeSubCategory" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteRecipeSubCatgoey" Content="Delete Category" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Processs Bulk Items" HorizontalAlignment="Left"  IsSelected="False" Name="ProcessBulk">
+                        <CheckBox Name="CheckAllBulk" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="DoProcessBulk" Content="Do Process" Tag="1"/>
+                    </TreeViewItem>
+                    
+                    <TreeViewItem Header="Addjacment Items" HorizontalAlignment="Left"  IsSelected="False" Name="AddjacmentItems">
+                        <CheckBox Name="CheckAllAddjacment" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="AddItemAddjacment" Content="Add Items" Tag="1"/>
+                        <CheckBox Name="DeleteAddjacment" Content="Delete" Tag="1"/>
+                        <CheckBox Name="AdjacmentAdjacment" Content="Save" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Addjacment Reasons" HorizontalAlignment="Left"  IsSelected="False" Name="AdjacmentReasons">
+                        <CheckBox Name="CheckAllAddjacmentReasons" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NewAddjacmentReasons" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveAddjacmentReasons" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateAddjacmentReasonss" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoAddjacmentReasons" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteAddjacmentReasons" Content="Delete Category" Tag="1"/>
+                    </TreeViewItem>
+
+                    <!--<TreeViewItem Header="Stock Inventory" HorizontalAlignment="Left"  IsSelected="False" Name="StockInventory">
+                        <CheckBox Name="CheckAllStockInventory" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="AddItemStockInventory" Content="Add Items" Tag="1"/>
+                        <CheckBox Name="DeleteStockInventory" Content="Delete Items" Tag="1"/>
+                        <CheckBox Name="AdjacmentStockInventory" Content="Make Inventory" Tag="1"/>
+                    </TreeViewItem>--> 
+
+                    <TreeViewItem Header="Physical Inventory" HorizontalAlignment="Left"  IsSelected="False" Name="PhysicalInventory">
+                        <CheckBox Name="CheckAllPhysicalInventory" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="StartTheInventory" Content="Start Items" Tag="1"/>
+                        <CheckBox Name="SaveTheInventory" Content="Save Items" Tag="1"/>
+                        <CheckBox Name="InventoryPhysicalInventory" Content="Make Inventory" Tag="1"/>
+                        <CheckBox Name="PrintPhysicalInventory" Content="Print Inventory sheet" Tag="1"/>
+                    </TreeViewItem>
+
+                    <!--<TreeViewItem Header="Outlet Subtraction" HorizontalAlignment="Left"  IsSelected="False" Name="OutletSubtraction">
+                        <CheckBox Name="CheckAllOutletSubtraction" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="SubtractionOutletSubtraction" Content="Make Subtraction" Tag="1"/>
+                    </TreeViewItem>-->
+
+                    <TreeViewItem Header="Vendors" HorizontalAlignment="Left" IsSelected="False" Name="Vendors">
+                        <CheckBox Name="CheckAllVendors" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NewVendors" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveVendors" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateVendors" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoVendors" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteVendors" Content="Delete Vendors" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Users" HorizontalAlignment="Left" IsSelected="False" Name="Users">
+                        <CheckBox Name="CheckAllUsers" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NewUsers" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveUsers" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateUsers" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoUsers" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteUsers" Content="Delete Users" Tag="1"/>
+                        <CheckBox Name="UsersAuth" Content="Users Authentication" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="UsersAuthentication" HorizontalAlignment="Left" IsSelected="False" Name="UsersAuthentication">
+                        <CheckBox Name="CheckAllUsersAuthentication" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NewUsersAuthentication" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveUsersAuthentication" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateUsersAuthentication" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoUsersAuthentication" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteUsersAuthentication" Content="Delete Authentication" Tag="1"/>
+                    </TreeViewItem>
+
+                    <TreeViewItem Header="Units" HorizontalAlignment="Left" IsSelected="False" Name="Units">
+                        <CheckBox Name="CheckAllUnits" Tag="1">Check All</CheckBox>
+                        <CheckBox Name="NewUnits" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveUnits" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateUnits" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoUnits" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteUnits" Content="Delete Unit" Tag="1"/>
+                        <CheckBox Name="NewConvUnits" Content="New" Tag="1"/>
+                        <CheckBox Name="SaveConvUnits" Content="Save" Tag="1"/>
+                        <CheckBox Name="UpdateConvUnits" Content="Update" Tag="1"/>
+                        <CheckBox Name="UndoConvUnits" Content="Undo" Tag="1"/>
+                        <CheckBox Name="DeleteConvUnits" Content="Delete Unit" Tag="1"/>
+                    </TreeViewItem>
+                </ListView>
+
+                <ListView Background="White" Foreground="Black" Height="350" VerticalAlignment="Top" Name="ListBox_UserClasses" MouseLeftButtonUp="User_Class_Mouse_Click"/>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+    </ScrollViewer>
+
+</Window>

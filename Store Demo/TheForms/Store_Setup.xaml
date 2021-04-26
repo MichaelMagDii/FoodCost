@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="Food_Cost.Store_Sertup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Store_Demo"
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d">
+
+    <Grid Background="White" Margin="80 60 0 0">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Foreground="Black" Name="StoreGBX" Margin="5" BorderBrush="#D0D3D4" Header="Restaurant">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock FontWeight="Bold" Text="Code" Foreground="#FFCD0E0E"/>
+                <TextBox Name="Code_txt" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+                <StackPanel  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <CheckBox Name="Active_chbx" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <TextBlock><Run Foreground="Green" FontWeight="Bold">Active</Run>
+                        </TextBlock>
+                    </CheckBox>
+                </StackPanel>
+
+                <TextBlock FontWeight="Bold" Grid.Row="2" VerticalAlignment="Center" Foreground="#FFCD0E0E" Text="Name"/>
+                <TextBox  Grid.Row="3" Grid.ColumnSpan="2" Name="Name_txt" />
+
+                <TextBlock Text="Name2" Grid.Row="4" VerticalAlignment="Center" Foreground="#FFCD0E0E" FontWeight="Bold" />
+                <TextBox Name="Name2_txt" Grid.Row="5" Grid.ColumnSpan="2"/>
+                
+                <Button Content="Kitchens" Name="KitchenBtn" Grid.Row="6" FontWeight="Bold" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2" Click="Button_Click"/>
+                <CheckBox Name="IsMain" Grid.Row="6" Grid.Column="1" Content="Main restaurant" HorizontalAlignment="Right" FontWeight="Bold"/>
+
+                <Grid Grid.Row="7" Grid.ColumnSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Name="NewBtn" Foreground="Black" Background="#cacfd2" Click="NewButtonClicked" Margin="3 1 3 1" >
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <materialDesign:PackIcon Kind="Plus" HorizontalAlignment="Left"/>
+                            <TextBlock HorizontalAlignment="Right"> New</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button Name="SaveBtn" Grid.Column="1" Background="Green" Margin="3 1 3 1" Click="SaveBtn_Click">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <materialDesign:PackIcon Kind="CheckboxMarkedCircle" HorizontalAlignment="Left"/>
+                            <TextBlock HorizontalAlignment="Right"> Save</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button Name="UpdateBtn" Grid.Column="2" Background="Green" Margin="3 1 3 1" Click="UpdateBtn_Click">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <materialDesign:PackIcon Kind="ArrowDown" HorizontalAlignment="Left"  />
+                            <TextBlock HorizontalAlignment="Right"> Update</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button Grid.Column="3" Name="UndoBtn" Margin="3 1 3 1" Click="UndoBtn_Click">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <materialDesign:PackIcon Kind="Undo" HorizontalAlignment="Left" />
+                            <TextBlock HorizontalAlignment="Right"> Undo</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button Name="DeleteBtn" Grid.Column="4" Foreground="White" Background="#cb4335" Margin="3 1 3 1" Click="DeleteBtn_Click">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <materialDesign:PackIcon Kind="Delete" HorizontalAlignment="Left" />
+                            <TextBlock HorizontalAlignment="Right"> Delete</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    
+                </Grid>
+            </Grid>
+        </GroupBox>
+
+        <DataGrid Name="Stores_DGV" Grid.Column="1" Grid.RowSpan="2" Margin="5" ItemsSource="{Binding}" AutoGenerateColumns="True" VerticalAlignment="Stretch" ScrollViewer.CanContentScroll="True"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"  CanUserAddRows="False" ColumnWidth="*" IsReadOnly="True"
+                          Height="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=ActualHeight}" MouseLeftButtonUp="RowClicked">
+
+        </DataGrid>
+
+    </Grid>
+
+
+
+</UserControl>

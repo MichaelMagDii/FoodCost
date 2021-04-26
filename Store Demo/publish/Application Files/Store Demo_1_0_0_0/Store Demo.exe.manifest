@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Store Demo.exe" version="1.0.0.0" publicKeyToken="a8b1993c9cfc53a9" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Store Demo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Store Demo.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialDesignColors.dll" size="229376">
+      <assemblyIdentity name="MaterialDesignColors" version="1.1.3.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>KV5clXU2BcQ8ydnSGKbo3g2hmrkXIlKoDUpy22X3msQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MaterialDesignThemes.Wpf.dll" size="5553664">
+      <assemblyIdentity name="MaterialDesignThemes.Wpf" version="2.5.1.1345" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>NiWdd89+nc/VAtW+Wx3RsClBQBLysHtrOkLs7iPXeoo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Store Demo.exe" size="200232">
+      <assemblyIdentity name="Store Demo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>C/S7ReH3bddiebcCPZI6ni4M0SqcIQXWvcsAGKOKvX4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Store Demo.exe.config" size="503">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Q6rlOA2rqKs5E/ri2/lDjwkN2wIB1R1IXrxPnTRWAs0=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-UDVO1PR\Mostafa El-Diasty" issuerKeyHash="da9d9f287b82ebffcfc95c8d9c5ed5d9742de2de" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vMJNbbIjWNnmi++09TUrrYcCKDpSUrOJAhHnEeCMvKA=</DigestValue></Reference></SignedInfo><SignatureValue>ehVG92dahxpo159juskLL3BCSRUEQd2wbs+kxcgHJ6yKxwIO4ewESTng8HBM79gGaFX64/4FGShOA0kLaxQZJhQmBgYwg009AYYiTdCeX3Vla58A0gSTH/UNyf8HXX73Ulw5BOQRWqwlZBg6rA/WM1UU0c0ak7d5UNVy+qzvyqY=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>9BN2VWexC0809k6+G/1pFI5MIf+ObUViDJVrCMGZZQhr8dXlkAzAAOqoUiyTZFlrdcBSTZmFS0uMWt2GU0t9gNT6t9P2hcA3LIRaYWhmHm8zE53uG5JJrJMBstSht0l4Aac7eTegy37jc8tTZg0H+MiJI3SExzyP2n9nuKfmYC0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="a0bc8ce011e7110289b352523a280287ad2b35f5b4ef8be6d95823b26d4dc2bc" Description="" Url=""><as:assemblyIdentity name="Store Demo.exe" version="1.0.0.0" publicKeyToken="a8b1993c9cfc53a9" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-UDVO1PR\Mostafa El-Diasty</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>rSUIgNyjIummCBtwy+fYchxiLs1CgHpM0oThtfIOrA4=</DigestValue></Reference></SignedInfo><SignatureValue>H68f5GcGPw9e9Z9XOhet3zlcb1KhbGqWpVsKacNr5UH8x+yqU6iYYn/XZHcxEcgAF3UCYTNIe9f/FqcrszS7HGEfSqgxN7jAtwhiIGrkiCERz7rmL3zdT6l9JF3qessuRurd3L6+Ll13sfsLInH3WNIiEXDo61pnX11caUUz7cs=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>9BN2VWexC0809k6+G/1pFI5MIf+ObUViDJVrCMGZZQhr8dXlkAzAAOqoUiyTZFlrdcBSTZmFS0uMWt2GU0t9gNT6t9P2hcA3LIRaYWhmHm8zE53uG5JJrJMBstSht0l4Aac7eTegy37jc8tTZg0H+MiJI3SExzyP2n9nuKfmYC0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICHTCCAYagAwIBAgIQf7Rbdo6tNIxIorxgTtUk4TANBgkqhkiG9w0BAQsFADBNMUswSQYDVQQDHkIARABFAFMASwBUAE8AUAAtAFUARABWAE8AMQBQAFIAXABNAG8AcwB0AGEAZgBhACAARQBsAC0ARABpAGEAcwB0AHkwHhcNMTkwNzE2MTIxMjMyWhcNMjAwNzE1MTgxMjMyWjBNMUswSQYDVQQDHkIARABFAFMASwBUAE8AUAAtAFUARABWAE8AMQBQAFIAXABNAG8AcwB0AGEAZgBhACAARQBsAC0ARABpAGEAcwB0AHkwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAPQTdlVnsQtPNPZOvhv9aRSOTCH/jm1FYgyVawjBmWUIa/HV5ZAMwADqqFIsk2RZa3XAUk2ZhUtLjFrdhlNLfYDU+rfT9oXANyyEWmFoZh5vMxOd7huSSayTAbLUobdJeAGnO3k3oMt+43PLU2YNB/jIiSN0hMc8j9p/Z7in5mAtAgMBAAEwDQYJKoZIhvcNAQELBQADgYEASsHamnPNecEo/z+XjqJBrXU65w8w4MfsmH+m7BN7MEOe8XLJjUdWYeqWVT8mC30HUbHCwhEbWkNodxbYKaj3H9Kup6VufmkNPrRIuvozILuTGDjhnQu1DOfnO5cSWp4hlNJ6ctrzZfMjFQa6SUFAbm1acMo5e6FvYrPpEJEdCow=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,51 @@
+﻿<Window x:Class="Food_Cost.Items"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Food_Cost"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Items" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Width="1200" Height="600">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="8*"/>
+            <!--<RowDefinition Height="0.5*"/>-->
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <materialDesign:PackIcon Kind="BoxVariantClosed" Foreground="#566573" Height="35" Width="50"/>
+            <TextBlock Text="Items" Margin="0 5"  Grid.Column="1" FontWeight="Bold" Foreground="#566573" FontSize="15"  />
+            <TextBlock Text="Search" Margin="0 5"  Grid.Column="2" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#566573" FontSize="15"  />
+            <TextBox Name="SearchTxt" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="12" TextChanged="TextDataChange"  ></TextBox>
+            <RadioButton Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Name="RadioByCode">By Code</RadioButton>
+            <RadioButton Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Name="RadioByName">By Name</RadioButton>
+
+        </Grid>
+
+        <DataGrid  Name="ReciveOrdersOrderDGV"  Grid.Row="1" ItemsSource="{Binding}" AutoGenerateColumns="True"  ColumnWidth="*" VerticalAlignment="Stretch"  ScrollViewer.CanContentScroll="True" MouseDoubleClick="ReciveOrderDGV_MouseDoubleClick" 
+                          ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Auto" IsReadOnly="True" 
+                          />
+
+        <!--<Button Name="UpdateBtn" Grid.Row="2" Background="Green" Click="UpdateBtn_Click">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                <materialDesign:PackIcon Kind="AddBox" HorizontalAlignment="Left"  />
+                <TextBlock HorizontalAlignment="Right"> Select  </TextBlock>
+            </StackPanel>
+        </Button>-->
+
+    </Grid>
+    
+</Window>

@@ -1,0 +1,20 @@
+﻿Food_Cost
+
+
+winexe
+C#
+.cs
+C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\
+Food_Cost
+none
+false
+DEBUG;TRACE
+C:\Users\Michael\Desktop\Food Cost\Store Demo\App.xaml
+47342158939
+
+1061534471276
+44-1123948017
+TheForms\AdjacmentInventory.xaml;TheForms\AdjacmentsReasons.xaml;TheForms\AllAdjacments.xaml;TheForms\AllCategories.xaml;TheForms\AllRecipes.xaml;TheForms\AllSubCategories.xaml;TheForms\AllUnits.xaml;TheForms\AllVendor.xaml;TheForms\All_Kitchens.xaml;TheForms\All_Purchase_Orders.xaml;TheForms\All_Resturants.xaml;TheForms\BulkWindow.xaml;TheForms\CategoriesAndSub.xaml;TheForms\Close_Month.xaml;TheForms\ConnectionString.xaml;TheForms\ExpireDate.xaml;TheForms\Fiscal_Period.xaml;TheForms\ItemsDefinitionSetup.xaml;TheForms\LogIn.xaml;TheForms\ProcessBulkItem.xaml;TheForms\RecieveOrder.xaml;TheForms\SetupGenerateBtch.xaml;TheForms\SetupPoRoMainRes.xaml;TheForms\StockInventory.xaml;TheForms\GenerateBatch.xaml;TheForms\PhysicalInventory.xaml;TheForms\Items.xaml;TheForms\KitcheItemsn.xaml;TheForms\Kitchens_Setup.xaml;MainWindow.xaml;TheForms\NewItems_Food_Cost.xaml;TheForms\OrderRequesation.xaml;TheForms\OutletRecipeSubtraction.xaml;TheForms\ParentItemInRecipe.xaml;TheForms\ParentWindow.xaml;TheForms\PurchaseOrder.xaml;TheForms\Recipes.xaml;TheForms\setup.xaml;TheForms\Setup_Station.xaml;TheForms\Store_Setup.xaml;TheForms\Transfer_Kitchens.xaml;TheForms\Transfer_Resturant.xaml;TheForms\Units.xaml;TheForms\Unit_Picker.xaml;TheForms\UserAuth.xaml;TheForms\Users.xaml;TheForms\Vendors.xaml;
+
+False
+

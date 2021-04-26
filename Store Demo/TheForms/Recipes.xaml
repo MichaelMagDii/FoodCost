@@ -1,0 +1,232 @@
+﻿<UserControl x:Class="Food_Cost.Recipes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Food_Cost"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" >
+
+    <Grid Background="White" Margin="80 60 0 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        
+        <GroupBox Header="All Recipes" Margin="2.5" TextBlock.FontWeight="Bold" FontWeight="Bold">
+            <!--<DataGrid Name="AllRecipesDGV" ScrollViewer.VerticalScrollBarVisibility="Visible" ItemsSource="{Binding}" AutoGenerateColumns="True"
+                               ScrollViewer.HorizontalScrollBarVisibility="Auto"  ScrollViewer.CanContentScroll="True" CanUserAddRows="False" MouseLeftButtonUp="RowClicked">
+            </DataGrid>-->
+            <TreeView Name="treeViewItems" PreviewMouseUp="TreeViewItems_SelectedItemChanged" />
+
+        </GroupBox>
+
+        <GroupBox Header="Recipe" Grid.Column="1" Margin="2.5" TextBlock.FontWeight="Bold">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"></RowDefinition>
+                    <RowDefinition Height="5*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Text="Code" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                        <TextBox Grid.Column="1" VerticalAlignment="Center" Foreground="Black" Name="codetxt" TextAlignment="Center" PreviewTextInput="NumberValidationTextBox" 
+                                        PreviewKeyDown="NeglectWhiteSpace" ToolTip="Enter the Number of Code"/>
+
+
+                        <TextBlock Text="Cross Code" Grid.Column="2" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                        <TextBox Grid.Column="3" VerticalAlignment="Center" Foreground="Black" Name="CrossCodetxt" TextAlignment="Center" PreviewTextInput="NumberValidationTextBox" ToolTip="Enter the Number of CrossCode" PreviewKeyDown="NeglectWhiteSpace" />
+
+
+                        <TextBlock Text="Active" Grid.Column="4" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                        <CheckBox Grid.Row="1" Grid.Column="4" Name="ActiveChbx" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+
+                        <TextBlock Text="Name" Grid.Row="1" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center" Foreground="Black" Name="Nametxt" TextAlignment="Center" ToolTip="Enter the Name" />
+
+
+                        <TextBlock Text="Name 2 " Grid.Row="2" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center" Foreground="Black" Name="Name2txt" TextAlignment="Center" ToolTip="Enter the Arabic Name"/>
+                        
+                        <TextBlock Text="Category " Grid.Row="3" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Foreground="Black" Name="Categtxt" TextAlignment="Center" Margin="5 0 5 0" IsReadOnly="True"/>
+                        <TextBox Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" Foreground="Black" Name="Categorytxt" TextAlignment="Center" Margin="5 0 5 0" IsReadOnly="True" />
+
+                        <Button Grid.Column="4" Grid.Row="3" Name="CategoryBtn" Background="Gray" Foreground="Black" Click="GetCatBtn" Margin="2 0 2 0">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock  HorizontalAlignment="Right"> . . .</TextBlock>
+                            </StackPanel>
+                        </Button>
+
+                        <TextBlock Text="SUB Category " Grid.Row="4" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBox Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Foreground="Black" Name="SUBCategtxt" TextAlignment="Center" Margin="5 0 5 0" IsReadOnly="True"/>
+                        <TextBox Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Center" Foreground="Black" Name="SUBCategorytxt" TextAlignment="Center" Margin="5 0 5 0" IsReadOnly="True"/>
+                        <Button Grid.Column="4" Grid.Row="4" Name="SubCategoryBtn"  Background="Gray" Foreground="Black" Click="GetSubCat" Margin="2 0 2 0">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock  HorizontalAlignment="Right"> . . .</TextBlock>
+                            </StackPanel>
+                        </Button>
+
+                        <TextBlock Text="Yiled Qty" Grid.Row="5" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden" />
+                        <TextBox Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Foreground="Black" Name="Yiledtxt" TextAlignment="Center" PreviewTextInput="NumberValidationTextBox" 
+                                        PreviewKeyDown="NeglectWhiteSpace" ToolTip="Enter the Number of Yiled" Visibility="Hidden"/>
+                        <TextBlock Text="Unit of Qty" Grid.Row="5" Grid.Column="2" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+
+                        <Grid Grid.Row="5" Grid.Column="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBox VerticalAlignment="Center" Foreground="Black" Name="Unittxt" TextAlignment="Center"  PreviewTextInput="NumberValidationTextBox" Margin="0 0 2.5 0"
+                                                PreviewKeyDown="NeglectWhiteSpace" ToolTip="Enter the Number of  Qty"/>
+                            <TextBox VerticalAlignment="Center" Grid.Column="1" HorizontalContentAlignment="Center" Foreground="Black" Name="Unitstxt" Margin="2.5 0 2.5 0" IsReadOnly="True"/>
+                        </Grid>
+                        
+                        <Button Grid.Column="4" Grid.Row="5" Name="UnitsBtn"  Background="Gray" Foreground="Black" Margin="2 0 2 0" Click="UnitsBtn_Click">
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock  HorizontalAlignment="Right"> . . .</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.7*"></RowDefinition>
+                        <RowDefinition Height="4*"></RowDefinition>
+                        <RowDefinition Height="0.5*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Column="1" Name="RemoveBtn" Background="Red" Margin="5 0 5 0" Click="RemoveBtn_Click" ToolTip="Click to Remove this Recipe Item">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Remove" />
+                                <TextBlock  HorizontalAlignment="Right"> Remove</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Grid.Column="2" Name="AddRecipeBtn" Background="#FFB9B31E" Margin="5 0 5 0" Click="AddRecipeBtn_Click" ToolTip="Click to Add Recipe in Recipe Items">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Add" />
+                                <TextBlock  HorizontalAlignment="Right"> Add Recipe</TextBlock>
+                            </StackPanel>
+                        </Button>
+                        <Button Grid.Column="3" Name="AddItemBtn" Background="#FF6A6719" Margin="5 0 5 0" Click="AddItemBtn_Click" ToolTip="Click to Add item As Recipe Items">
+                            <StackPanel Orientation="Horizontal" >
+                                <materialDesign:PackIcon Kind="Add" />
+                                <TextBlock  HorizontalAlignment="Right"> Add Items</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+
+                    <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2">
+                        <Grid Grid.Row="1">
+                            <DataGrid Name="RecipesDGV" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding}" AutoGenerateColumns="True" MouseDoubleClick="RecipesDGV_MouseDoubleClick"  CellEditEnding="RecipesDGV_CellEditEnding"
+                               ScrollViewer.HorizontalScrollBarVisibility="Auto"  ScrollViewer.CanContentScroll="True" MouseLeftButtonUp="ItemRowClick" CanUserAddRows="False" PreviewTextInput="NumberValidationTextBox"  PreviewKeyDown="NeglectWhiteSpace">
+                            </DataGrid>
+                        </Grid>
+                    </Border>
+                    
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Tottal" Grid.Column="1" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                        <TextBox Grid.Column="2" VerticalAlignment="Center" Foreground="Black" Name="Tottaltxt" TextAlignment="Center" BorderBrush="Black" BorderThickness="1"/>
+                    </Grid>
+                </Grid>
+
+
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Name="SearchBtn" Background="#FF858576" Margin="5 0 5 0">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Search" />
+                            <TextBlock  HorizontalAlignment="Right">Search</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="1" Name="RenewBtn" Background="#FF5D0F52" Margin="5 0 5 0" Click="RenewBtn_Click" ToolTip="Click If you want make a New recipe with Same items">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Autorenew" />
+                            <TextBlock  HorizontalAlignment="Right">ReNew</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="2" Name="NewBtn" Background="#FFD63B6D" Margin="5 0 5 0" Click="NewBtn_Click" ToolTip="Click if you want create new Recipe">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="NewBox" />
+                            <TextBlock  HorizontalAlignment="Right">New</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="3" Name="SaveBtn" Background="Green" Margin="5 0 5 0" Click="SaveBtn_Click" ToolTip="Click if you want Save the Recipe" >
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Cordova" />
+                            <TextBlock  HorizontalAlignment="Right">Save</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="4" Name="EditBtn" Background="#FF1851CB" Margin="5 0 5 0" Click="EditBtn_Click" ToolTip="Click if you want save the Recipe Update">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Edit" />
+                            <TextBlock  HorizontalAlignment="Right">Edit</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="5" Name="UndoBtn" Background="#FF63CDB5" Margin="5 0 5 0" Click="UndoBtn_Click" ToolTip="Click if you want Undo the Change">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Undo" />
+                            <TextBlock  HorizontalAlignment="Right">Undo</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Column="6" Name="DeleteBtn" Background="Black" Margin="5 0 5 0" Click="DeleteBtn_Click" ToolTip="Click if you want Delete this Recipe and it Items">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Delete" />
+                            <TextBlock  HorizontalAlignment="Right">Delete</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+    
+</UserControl>

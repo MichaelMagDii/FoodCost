@@ -1,0 +1,15 @@
+Select * from (
+SELECT Adjacment_Date AS _DATE,'Adjacment' AS Trantype , Item_ID, Unit, ItemName, RestaurantName, KitchenName, -Variance as Qty, -Variance as AcQty, Cost
+from BinAdjView
+Union ALL
+SELECT Receiving_Date,'RO_Items' AS ad,  Item_ID,  Unit, ItemName, RestaurantName, KitchenName,Qty,Qty,Net_Price
+From ReceiveItemsView
+where Type IN ('Auto_Recieve','Recieve_Purchase') 
+Union ALL
+SELECT Transfer_Date,'Transfer_Kitchens' AS ad,  Item_ID,  Unit, ItemName, RestaurantName, KitchenName,Qty,Qty,Net_Cost
+From TransferItemsFrom
+Union ALL
+SELECT Transfer_Date,'Transfer_KitchensTo' AS ad,  Item_ID,  Unit, ItemName, RestaurantName, KitchenName,-Qty,-Qty,Net_Cost
+From TransferItemsTo
+) as Balance
+order by Item_ID,RestaurantName, KitchenName,_DATE

@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F882BC44-238B-4168-8E3A-9B360196317C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Food_Cost</RootNamespace>
+    <AssemblyName>Food_Cost</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EFF8DF8FF9E27164577AF08CDC8BF5D40D0D2E82</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Store Demo_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cost-icon-6.jpg.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DataGrid2DLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FoodCost-master\FoodCost-master\Store Demo\bin\Debug\DataGrid2DLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.2.0.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.3.2.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FoodCost-master\FoodCost-master\Store Demo\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FoodCost-master\FoodCost-master\Store Demo\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FoodCost-master\FoodCost-master\Store Demo\bin\Debug\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FoodCost-master\FoodCost-master\Store Demo\bin\Debug\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Report\CR_RecipesQty.cs">
+      <DependentUpon>CR_RecipesQty.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\CR_PrintRO.cs">
+      <DependentUpon>CR_PrintRO.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\CR_InventoryStats.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_InventoryStats.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_EndingMonth.cs">
+      <DependentUpon>CR_EndingMonth.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TheForms\AdjacmentInventory.xaml.cs">
+      <DependentUpon>AdjacmentInventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\AdjacmentsReasons.xaml.cs">
+      <DependentUpon>AdjacmentsReasons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\AllAdjacments.xaml.cs">
+      <DependentUpon>AllAdjacments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\AllCategories.xaml.cs">
+      <DependentUpon>AllCategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\AllRecipes.xaml.cs">
+      <DependentUpon>AllRecipes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\AllSubCategories.xaml.cs">
+      <DependentUpon>AllSubCategories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\AllUnits.xaml.cs">
+      <DependentUpon>AllUnits.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\AllVendor.xaml.cs">
+      <DependentUpon>AllVendor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\All_Kitchens.xaml.cs">
+      <DependentUpon>All_Kitchens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\All_Purchase_Orders.xaml.cs">
+      <DependentUpon>All_Purchase_Orders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\All_Resturants.xaml.cs">
+      <DependentUpon>All_Resturants.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\BulkWindow.xaml.cs">
+      <DependentUpon>BulkWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\CategoriesAndSub.xaml.cs">
+      <DependentUpon>CategoriesAndSub.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes.cs" />
+    <Compile Include="TheForms\Close_Month.xaml.cs">
+      <DependentUpon>Close_Month.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\ConnectionString.xaml.cs">
+      <DependentUpon>ConnectionString.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DgvData.cs" />
+    <Compile Include="TheForms\ExpireDate.xaml.cs">
+      <DependentUpon>ExpireDate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Fiscal_Period.xaml.cs">
+      <DependentUpon>Fiscal_Period.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_GeneratedRecipescs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_GeneratedRecipescs.designer.cs">
+      <DependentUpon>Rpt_GeneratedRecipescs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_MonthClosing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_MonthClosing.designer.cs">
+      <DependentUpon>Rpt_MonthClosing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_RecipesItemsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_RecipesItemsView.designer.cs">
+      <DependentUpon>Rpt_RecipesItemsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\ItemsDefinitionSetup.xaml.cs">
+      <DependentUpon>ItemsDefinitionSetup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\LogIn.xaml.cs">
+      <DependentUpon>LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\ProcessBulkItem.xaml.cs">
+      <DependentUpon>ProcessBulkItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recalculate.cs" />
+    <Compile Include="TheForms\RecieveOrder.xaml.cs">
+      <DependentUpon>RecieveOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CR_BinCard 2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_BinCard 2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_GeneratedRecipes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_GeneratedRecipes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Cr_MonthClosing.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cr_MonthClosing.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TheForms\SetupGenerateBtch.xaml.cs">
+      <DependentUpon>SetupGenerateBtch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\SetupPoRoMainRes.xaml.cs">
+      <DependentUpon>SetupPoRoMainRes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\StockInventory.xaml.cs">
+      <DependentUpon>StockInventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSelection.designer.cs">
+      <DependentUpon>FrmSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportsForm.designer.cs">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportView.designer.cs">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_BinCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_BinCard.designer.cs">
+      <DependentUpon>Rpt_BinCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_InterKitchenTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_InterKitchenTransfer.designer.cs">
+      <DependentUpon>Rpt_InterKitchenTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_InventoryStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_InventoryStats.designer.cs">
+      <DependentUpon>Rpt_InventoryStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_PurchaseItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_PurchaseItems.designer.cs">
+      <DependentUpon>Rpt_PurchaseItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_PurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_PurchaseOrder.designer.cs">
+      <DependentUpon>Rpt_PurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_ReceiveItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_ReceiveItems.designer.cs">
+      <DependentUpon>Rpt_ReceiveItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_ReceiveOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_ReceiveOrder.designer.cs">
+      <DependentUpon>Rpt_ReceiveOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_StoresItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_StoresItems.designer.cs">
+      <DependentUpon>Rpt_StoresItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_TransferItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_TransferItems.designer.cs">
+      <DependentUpon>Rpt_TransferItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rpt_Vendors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rpt_Vendors.designer.cs">
+      <DependentUpon>Rpt_Vendors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\GenerateBatch.xaml.cs">
+      <DependentUpon>GenerateBatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\PhysicalInventory.xaml.cs">
+      <DependentUpon>PhysicalInventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Items.xaml.cs">
+      <DependentUpon>Items.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\KitcheItemsn.xaml.cs">
+      <DependentUpon>KitcheItemsn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Kitchens_Setup.xaml.cs">
+      <DependentUpon>Kitchens_Setup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\NewItems_Food_Cost.xaml.cs">
+      <DependentUpon>NewItems_Food_Cost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\OrderRequesation.xaml.cs">
+      <DependentUpon>OrderRequesation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\OutletRecipeSubtraction.xaml.cs">
+      <DependentUpon>OutletRecipeSubtraction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\ParentItemInRecipe.xaml.cs">
+      <DependentUpon>ParentItemInRecipe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\ParentWindow.xaml.cs">
+      <DependentUpon>ParentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\PurchaseOrder.xaml.cs">
+      <DependentUpon>PurchaseOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Recipes.xaml.cs">
+      <DependentUpon>Recipes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CR_BinCard.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_BinCard.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_InterKitchenTrasnfer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_InterKitchenTrasnfer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_PO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_PO.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_POitems.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_POitems.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_ReceiveItemes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_ReceiveItemes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_ReceiveOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_ReceiveOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_Recipes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Recipes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_Stores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Stores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_Transfer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Transfer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CR_Vendors.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Vendors.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TheForms\setup.xaml.cs">
+      <DependentUpon>setup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Setup_Station.xaml.cs">
+      <DependentUpon>Setup_Station.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Store_Setup.xaml.cs">
+      <DependentUpon>Store_Setup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Transfer_Kitchens.xaml.cs">
+      <DependentUpon>Transfer_Kitchens.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Transfer_Resturant.xaml.cs">
+      <DependentUpon>Transfer_Resturant.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Units.xaml.cs">
+      <DependentUpon>Units.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Unit_Picker.xaml.cs">
+      <DependentUpon>Unit_Picker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\UserAuth.xaml.cs">
+      <DependentUpon>UserAuth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC_TVKitchens.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC_TVKitchens.designer.cs">
+      <DependentUpon>UC_TVKitchens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Users.xaml.cs">
+      <DependentUpon>Users.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TheForms\Vendors.xaml.cs">
+      <DependentUpon>Vendors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="TheForms\AdjacmentInventory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\AdjacmentsReasons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\AllAdjacments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\AllCategories.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\AllRecipes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\AllSubCategories.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\AllUnits.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\AllVendor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\All_Kitchens.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\All_Purchase_Orders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\All_Resturants.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\BulkWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\CategoriesAndSub.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Close_Month.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\ConnectionString.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\ExpireDate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Fiscal_Period.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\ItemsDefinitionSetup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\ProcessBulkItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\RecieveOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\SetupGenerateBtch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\SetupPoRoMainRes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\StockInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\GenerateBatch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\PhysicalInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\Items.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\KitcheItemsn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Kitchens_Setup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\NewItems_Food_Cost.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\OrderRequesation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\OutletRecipeSubtraction.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\ParentItemInRecipe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\ParentWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\PurchaseOrder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Recipes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\setup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Setup_Station.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Store_Setup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Transfer_Kitchens.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Transfer_Resturant.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TheForms\Units.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\Unit_Picker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\UserAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\Users.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TheForms\Vendors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Forms\FrmSelection.resx">
+      <DependentUpon>FrmSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportsForm.resx">
+      <DependentUpon>ReportsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReportView.resx">
+      <DependentUpon>ReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_BinCard.resx">
+      <DependentUpon>Rpt_BinCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_GeneratedRecipescs.resx">
+      <DependentUpon>Rpt_GeneratedRecipescs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_InterKitchenTransfer.resx">
+      <DependentUpon>Rpt_InterKitchenTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_InventoryStats.resx">
+      <DependentUpon>Rpt_InventoryStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_MonthClosing.resx">
+      <DependentUpon>Rpt_MonthClosing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_PurchaseItems.resx">
+      <DependentUpon>Rpt_PurchaseItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_PurchaseOrder.resx">
+      <DependentUpon>Rpt_PurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_ReceiveItems.resx">
+      <DependentUpon>Rpt_ReceiveItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_ReceiveOrder.resx">
+      <DependentUpon>Rpt_ReceiveOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_RecipesItemsView.resx">
+      <DependentUpon>Rpt_RecipesItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_StoresItems.resx">
+      <DependentUpon>Rpt_StoresItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_TransferItems.resx">
+      <DependentUpon>Rpt_TransferItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rpt_Vendors.resx">
+      <DependentUpon>Rpt_Vendors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_BinCard 2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BinCard 2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_BinCard.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_BinCard.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_RecipesQty.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_RecipesQty.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_PrintRO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_PrintRO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_GeneratedRecipes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_GeneratedRecipes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_InterKitchenTrasnfer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_InterKitchenTrasnfer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_InventoryStats.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_InventoryStats.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_EndingMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_EndingMonth.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Cr_MonthClosing.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cr_MonthClosing.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_PO.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_PO.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_POitems.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_POitems.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_ReceiveItemes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_ReceiveItemes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_ReceiveOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_ReceiveOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_Recipes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Recipes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_Stores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Stores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_Transfer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Transfer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CR_Vendors.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Vendors.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UC_TVKitchens.resx">
+      <DependentUpon>UC_TVKitchens.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cost-icon-6.jpg.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Logo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,14 @@
+/* Recalc Items Qty */
+Update Item_Invn_Qty Set Qty =  ((Select { fn IFNULL(SUM(VI.Qty_Rcvd),0)} AS Qty From Voucher AS Vou INNER JOIN Vou_Items_V AS VI ON Vou.VOU_ID = VI.VOU_ID WHERE (Vou.SCom_ID = Item_Invn_Qty.SCom_ID) AND (Vou.Store_ID  = Item_Invn_Qty.Store_ID  ) AND (VI.Item_ID = Item_Invn_Qty.Item_ID ) AND (Vou.Post = 1)  ) 
+- (Select { fn IFNULL(SUM(TI.Qty_Tran),0)} AS Qty From Transfer AS T INNER JOIN Transfer_Items_V AS TI ON T.Tran_ID = TI.Tran_ID WHERE (T.SCom_ID = Item_Invn_Qty.SCom_ID) AND (T.From_Store_ID  = Item_Invn_Qty.Store_ID ) AND (TI.Item_ID = Item_Invn_Qty.Item_ID ) AND (T.Post = 1) ) 
+ + (Select { fn IFNULL(SUM(AI.Adj_Value - AI.Orig_Value),0)} AS Qty From Adjustments AS A INNER JOIN Adjust_Items AS AI ON AI.Adj_ID = A.Adj_ID WHERE (A.Adj_Type = 'Qty') AND (A.SCom_ID = Item_Invn_Qty.SCom_ID) AND (A.Store_ID  = Item_Invn_Qty.Store_ID  ) AND (AI.Item_ID = Item_Invn_Qty.Item_ID ) AND (A.Post = 1) )  
+- (Select { fn IFNULL(SUM(II.QTY),0)} AS Qty From Invoice AS INVC INNER JOIN Invoice_Item_V AS II ON INVC.INVC_ID = II.INVC_ID WHERE (INVC.SCom_ID= Item_Invn_Qty.SCom_ID) AND (INVC.Store_ID  = Item_Invn_Qty.Store_ID  ) AND (II.Item_ID = Item_Invn_Qty.Item_ID ) AND (INVC.Post = 1)  AND (INVC.Source_Type IN ('Invoice','Receipt'))) ) 
+
+
+
+/* Recalc Items Serial Qty */
+Update Item_Invn_Qty_Serial Set Qty =  ((Select { fn IFNULL(SUM(VI.Qty),0)} AS Qty From Voucher AS Vou INNER JOIN Vou_Serial_Items AS VI ON Vou.VOU_ID = VI.VOU_ID WHERE (Vou.SCom_ID = Item_Invn_Qty_Serial.SCom_ID) AND (Vou.Store_ID  = Item_Invn_Qty_Serial.Store_ID  ) AND (VI.Item_ID = Item_Invn_Qty_Serial.Item_ID ) AND (VI.Serial_Item = Item_Invn_Qty_Serial.Serial_Item ) AND (Vou.Post = 1)  ) 
+- (Select { fn IFNULL(SUM(TI.Qty),0)} AS Qty From Transfer AS T INNER JOIN Transfer_Serial_Items AS TI ON T.Tran_ID = TI.Tran_ID WHERE (T.SCom_ID = Item_Invn_Qty_Serial.SCom_ID) AND (T.From_Store_ID  = Item_Invn_Qty_Serial.Store_ID ) AND (TI.Item_ID = Item_Invn_Qty_Serial.Item_ID ) AND (TI.Serial_Item = Item_Invn_Qty_Serial.Serial_Item ) AND (T.Post = 1) ) 
+ + (Select { fn IFNULL(SUM(AI.Qty),0)} AS Qty From Adjustments AS A INNER JOIN Adjust_Serial_Items AS AI ON AI.Adj_ID = A.Adj_ID WHERE (A.Adj_Type = 'Qty') AND (A.SCom_ID = Item_Invn_Qty_Serial.SCom_ID) AND (A.Store_ID  = Item_Invn_Qty_Serial.Store_ID  ) AND (AI.Item_ID = Item_Invn_Qty_Serial.Item_ID ) AND (AI.Serial_Item = Item_Invn_Qty_Serial.Serial_Item ) AND (A.Post = 1) )  
+- (Select { fn IFNULL(SUM(II.QTY),0)} AS Qty From Invoice AS INVC INNER JOIN Invoice_Serial_Items AS II ON INVC.INVC_ID = II.INVC_ID WHERE (INVC.SCom_ID= Item_Invn_Qty_Serial.SCom_ID) AND (INVC.Store_ID  = Item_Invn_Qty_Serial.Store_ID  ) AND (II.Item_ID = Item_Invn_Qty_Serial.Item_ID ) AND (II.Serial_Item = Item_Invn_Qty_Serial.Serial_Item ) AND (INVC.Post = 1)  AND (INVC.Source_Type IN ('Invoice','Receipt'))) )
+

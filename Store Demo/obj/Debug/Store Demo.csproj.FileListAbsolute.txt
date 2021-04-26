@@ -1,0 +1,117 @@
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\bin\Debug\Store Demo.exe.config
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\MainWindow.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\App.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo_MarkupCompile.cache
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo_MarkupCompile.lref
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\bin\Debug\Store Demo.exe
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\bin\Debug\Store Demo.pdb
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\bin\Debug\MaterialDesignColors.dll
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\App.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\MainWindow.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo.g.resources
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store_Demo.Properties.Resources.resources
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo.csproj.GenerateResource.Cache
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo.exe
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo.pdb
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Level1.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Level2.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Level3.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Level4.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Level1.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Level2.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Level3.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Level4.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo.csprojAssemblyReference.cache
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo.csproj.CoreCompileInputs.cache
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store Demo.csproj.CopyComplete
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Users.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Users.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\UserAuth.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\UserAuth.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\UDFSetupUC.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\UDFSetupUC.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\All_Items_UC.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\All_Items_UC.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store_Setup.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Store_Setup.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Vendors.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Vendors.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Color.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\Color.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\PurchaseOrederUC.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\PurchaseOrederUC.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\All_OrdersPurchase_UC.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\All_OrdersPurchase_UC.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\All_RecieveOrder.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\RecieveOrder.g.cs
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\All_RecieveOrder.baml
+C:\Users\Mostafa\source\repos\Store Demo\Store Demo\obj\Debug\RecieveOrder.baml
+D:\Store Demo\Store Demo\bin\Debug\Store Demo.exe.config
+D:\Store Demo\Store Demo\bin\Debug\Store Demo.exe.manifest
+D:\Store Demo\Store Demo\bin\Debug\Store Demo.application
+D:\Store Demo\Store Demo\bin\Debug\Store Demo.exe
+D:\Store Demo\Store Demo\bin\Debug\Store Demo.pdb
+D:\Store Demo\Store Demo\bin\Debug\DataGrid2DLibrary.dll
+D:\Store Demo\Store Demo\bin\Debug\MaterialDesignColors.dll
+D:\Store Demo\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\Store Demo\Store Demo\bin\Debug\MaterialDesignColors.pdb
+D:\Store Demo\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\Store Demo\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\Store Demo\Store Demo\obj\Debug\Level1.baml
+D:\Store Demo\Store Demo\obj\Debug\Level2.baml
+D:\Store Demo\Store Demo\obj\Debug\Level3.baml
+D:\Store Demo\Store Demo\obj\Debug\Level4.baml
+D:\Store Demo\Store Demo\obj\Debug\UDFSetupUC.baml
+D:\Store Demo\Store Demo\obj\Debug\AddItems.g.cs
+D:\Store Demo\Store Demo\obj\Debug\All_Items_UC.g.cs
+D:\Store Demo\Store Demo\obj\Debug\All_OrdersPurchase_UC.g.cs
+D:\Store Demo\Store Demo\obj\Debug\All_RecieveOrder.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Color.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Level1.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Level2.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Level3.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Level4.g.cs
+D:\Store Demo\Store Demo\obj\Debug\MainWindow.g.cs
+D:\Store Demo\Store Demo\obj\Debug\PurchaseOrederUC.g.cs
+D:\Store Demo\Store Demo\obj\Debug\RecieveOrder.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Selectors.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Store_Setup.g.cs
+D:\Store Demo\Store Demo\obj\Debug\UDFSetupUC.g.cs
+D:\Store Demo\Store Demo\obj\Debug\UserAuth.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Users.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Vendors.g.cs
+D:\Store Demo\Store Demo\obj\Debug\App.g.cs
+D:\Store Demo\Store Demo\obj\Debug\Store Demo_MarkupCompile.cache
+D:\Store Demo\Store Demo\obj\Debug\Store Demo_MarkupCompile.lref
+D:\Store Demo\Store Demo\obj\Debug\App.baml
+D:\Store Demo\Store Demo\obj\Debug\AddItems.baml
+D:\Store Demo\Store Demo\obj\Debug\All_Items_UC.baml
+D:\Store Demo\Store Demo\obj\Debug\All_OrdersPurchase_UC.baml
+D:\Store Demo\Store Demo\obj\Debug\All_RecieveOrder.baml
+D:\Store Demo\Store Demo\obj\Debug\Color.baml
+D:\Store Demo\Store Demo\obj\Debug\MainWindow.baml
+D:\Store Demo\Store Demo\obj\Debug\PurchaseOrederUC.baml
+D:\Store Demo\Store Demo\obj\Debug\RecieveOrder.baml
+D:\Store Demo\Store Demo\obj\Debug\Selectors.baml
+D:\Store Demo\Store Demo\obj\Debug\Store_Setup.baml
+D:\Store Demo\Store Demo\obj\Debug\UserAuth.baml
+D:\Store Demo\Store Demo\obj\Debug\Users.baml
+D:\Store Demo\Store Demo\obj\Debug\Vendors.baml
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.g.resources
+D:\Store Demo\Store Demo\obj\Debug\Store_Demo.Properties.Resources.resources
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.csproj.GenerateResource.cache
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.csproj.CoreCompileInputs.cache
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.exe.manifest
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.application
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.csproj.CopyComplete
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.exe
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.pdb
+D:\Store Demo\Store Demo\obj\Debug\Store Demo.csprojAssemblyReference.cache
+D:\Store Demo\Store Demo\obj\Debug\AllStyles.g.cs
+D:\Store Demo\Store Demo\obj\Debug\AllStyles.baml
+D:\Store Demo\Store Demo\obj\Debug\CC_UC.g.cs
+D:\Store Demo\Store Demo\obj\Debug\CC_UC.baml

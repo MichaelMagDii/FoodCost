@@ -1,0 +1,446 @@
+﻿<UserControl x:Class="Food_Cost.NewItems_Food_Cost"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" >
+
+    <Grid Name="parentdrid" Margin="80 65 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <Grid Margin="10" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="4" Name="Backbtn" Foreground="White" Background="DimGray" FontSize="12" >
+                <StackPanel Orientation="Horizontal">
+                    <materialDesign:PackIcon Kind="KeyboardReturn" />
+                    <TextBlock HorizontalAlignment="Right">Back</TextBlock>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid  Name="MainGrid" Background="White">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Margin="0 20 0 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="6*"/>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Margin="0 0 0 15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <Button ToolTip="Add" Click="AddClicked" Background="Transparent" MaxWidth="45">
+                            <materialDesign:PackIcon Kind="Plus" Width="20" Height="20" Foreground="Green" HorizontalAlignment="Center"/>
+                        </Button>
+                        
+                        <Button Name="Reload" Grid.Column="1" ToolTip="Reload" Click="ReloadClicked" Background="Transparent" MaxWidth="45">
+                            <materialDesign:PackIcon Kind="Reload" Foreground="Gray" Width="20" Height="20" HorizontalAlignment="Center"/>
+                        </Button>
+                        
+                        <Button Grid.Column="2" ToolTip="Remove" Click="DeleteClicked" Background="Transparent" MaxWidth="45">
+                            <materialDesign:PackIcon Kind="Delete" Foreground="Red" Width="20" Height="20" HorizontalAlignment="Center"/>
+                        </Button>
+                    </Grid>
+
+                    <TreeView Grid.Row="1" Name="treeViewItems" PreviewMouseUp="TreeViewItems_SelectedItemChanged" BorderBrush="#FF2196F3" BorderThickness="2" Margin="10" SelectedItemChanged="TreeViewItems_SelectedItemChanged_1"/>
+
+                    <Button Grid.Row="2" Background="Green" FontSize="12" Padding="2" Margin="10" ToolTip="save" Click="SaveBtn_Clicked" Name="savebtn">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="ThumbsUp" Margin="0 0 5 0" />
+                            <TextBlock  HorizontalAlignment="Right"> Save</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Row="3" FontSize="12" Padding="2" VerticalAlignment="Center" Margin="10">
+                        <StackPanel Orientation="Horizontal" >
+                            <materialDesign:PackIcon Kind="Close" Margin="0 0 5 0" />
+                            <TextBlock  HorizontalAlignment="Right"> Cancel</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                </Grid>
+
+                <Grid Name="MainGrid2" Background="White" Grid.Column="2" Margin="0 20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.RowSpan="2" Name="ItemsGroupBox" Visibility="Hidden">
+                        <GroupBox  IsEnabled="True" BorderBrush="#D0D3D4" Header="Item" TextBlock.FontWeight="Bold" >
+                            <Grid  TextBlock.FontWeight="Normal" TextBlock.Foreground="Black" Name="detailsGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="Code: *" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" Name="CodeLabel"/>
+                                <TextBox Grid.Column="1" VerticalAlignment="Center" Name="Codetxt" IsReadOnly="True" HorizontalContentAlignment="Center" />
+
+                                <TextBlock Text="Manual Code: *" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" Grid.Column="2" />
+                                <TextBox  VerticalAlignment="Center" Name="Manual_Code_txt" Grid.Column="3"  TextAlignment="Center" PreviewTextInput="NumberValidationTextBox" PreviewKeyDown="NeglectWhiteSpace" HorizontalContentAlignment="Center"/>
+
+                                <TextBlock Text="Bar Code" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" />
+                                <TextBox Grid.Column="5" VerticalAlignment="Center" Name="BarCodetxt" HorizontalContentAlignment="Center"/>
+                                <Button Grid.Column="6" Content="GB" VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF838F99"/>
+
+                                <Grid Grid.Column="7" HorizontalAlignment="Right" VerticalAlignment="Top" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="74*"/>
+                                        <ColumnDefinition Width="77*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Name="ItemImage"  Width="150" Source="gray.jpg" Stretch="Fill" Margin="0,-14,0.4,-36.2" Grid.ColumnSpan="2" MouseLeftButtonUp="ItemImage_MouseLeftButtonUp" />
+                                    <TextBlock Name="Imagetxt" Text="Click to Add Image" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="12,35,12.4,10.2" Grid.ColumnSpan="2" Height="22"/>
+                                </Grid>
+
+                                <TextBlock Grid.Row="1" Text="Name1: *" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Name="Name1txt" HorizontalContentAlignment="Center" />
+                                
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="Name2: *"  VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" Name="Name2txt" HorizontalContentAlignment="Center"/>
+
+                                <TextBlock Grid.Row="1" Grid.Column="4" Text="Prefared Vendor: " VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBox Grid.Row="1" Grid.Column="5" VerticalAlignment="Center" Name="PrefVendortxt" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                                <Button Grid.Row="1" Grid.Column="6" Content="..." VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF838F99" Click="Vendor_Button"/>
+
+
+                                <TextBlock Grid.Row="2" Text="POS Code: "  VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Name="PosCodetxt" HorizontalContentAlignment="Center"/>
+
+                                <TextBlock Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" Text="Specs" HorizontalAlignment="Center" Foreground="Black"/>
+                                <TextBox Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Name="Specstxt" Foreground="Black" BorderBrush="Black" BorderThickness="1" TextWrapping="Wrap" AcceptsReturn="True"  VerticalContentAlignment="Center" />
+
+                                <Grid Grid.Row="3" Grid.ColumnSpan="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="1.3*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Text="Category: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                    <TextBox Grid.Column="1" Name="Categorytxt" Padding="3" VerticalAlignment="Center" Margin="0 0 0 20" IsEnabled="False" HorizontalContentAlignment="Center"/>
+
+                                    <TextBlock Grid.Column="2" Text="Department: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                    <TextBox Grid.Column="3" Name="Departmenttxt" Padding="3" VerticalAlignment="Center" Margin="0 0 0 20" IsEnabled="False" HorizontalContentAlignment="Center"/>
+
+                                    <TextBlock Text="Class: " Name="TheClass" FontSize="13" VerticalAlignment="Center" Grid.Column="4" HorizontalAlignment="Center"/>
+                                    <TextBox  Grid.Column="5" Name="Classtxt" Padding="3" VerticalAlignment="Center" Margin="0 0 0 20" IsEnabled="False" HorizontalContentAlignment="Center"/>
+
+                                    <TextBlock Text="Sub Class: " Name="TheSubClass" FontSize="13" VerticalAlignment="Center" Grid.Column="6" HorizontalAlignment="Center"/>
+                                    <TextBox Grid.Column="7" Name="SubClasstxt" Padding="3" VerticalAlignment="Center" Margin="0 0 0 20" IsEnabled="False" HorizontalContentAlignment="Center"/>
+                                </Grid>
+
+                                <CheckBox Grid.Row="4"  Content="Active" Name="Activecbx" HorizontalAlignment="Center" />
+                                <CheckBox Grid.Row="4" Grid.Column="1" Content="Exp Date" HorizontalAlignment="Center" Name="ExpDate_cb" />
+                                <CheckBox Grid.Row="4" Grid.Column="2" Content="Non Inventory" Name="Inventory_Item" HorizontalAlignment="Center" />
+                                <CheckBox Grid.Row="4" Grid.Column="3" Content="Catch Weight" Name="CW_cb"/>
+                                <CheckBox Grid.Row="4" Grid.Column="4" Content="Bulk item" Name="BI_cb" Click="BI_cb_Click"/>
+                                <CheckBox Grid.Row="4" Grid.Column="5" Content="Parent item" Name="PI_cb" Click="PI_cb_Checked"/>
+                                <CheckBox Grid.Row="4" Grid.Column="6" Content="Hot items" Name="HI_cb"/>
+
+
+
+                                <Grid Grid.Row="5" Grid.ColumnSpan="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <CheckBox Content="Multi Unit Track" VerticalAlignment="Center" HorizontalAlignment="Center" Name="MUT_cb" Click="MUT_cb_Clicked"/>
+                                    <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <CheckBox Content="Taxable item" Grid.Column="1" Name="TI_cb" Click="TI_cb_Clicked"/>
+                                        <TextBox   Name="TI_Value" Width="30"  Visibility="Hidden" PreviewTextInput="NumberValidationTextBox" PreviewKeyDown="NeglectWhiteSpace" HorizontalContentAlignment="Center"/>
+                                        <Label Content="%" Visibility="Hidden" Name="TI_Prec_icon"/>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <TextBlock Grid.Column="2" Text="Yield: *" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                        <TextBox Grid.Column="3" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center" Name="Yieldtxt" PreviewTextInput="NumberValidationTextBox" PreviewKeyDown="NeglectWhiteSpace"  HorizontalContentAlignment="Center" />
+                                        <TextBlock Grid.Column="3" Text="%" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                                    </StackPanel>
+
+                                    <Grid Grid.Column="3" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="Weight: *" VerticalAlignment="Center" Foreground="Red"/>
+                                        <TextBox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="60" Margin="10 0 0 0" Name="Weight" PreviewTextInput="NumberValidationTextBox" PreviewKeyDown="NeglectWhiteSpace"  HorizontalContentAlignment="Center" />
+                                        <TextBox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="Black" Width="50" Margin="2" Name="unit" HorizontalContentAlignment="Center" IsReadOnly="True"/>
+                                        <Button Grid.Column="3" Grid.Row="1"  Content="..." VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF838F99" Click="Unit_Button"/>
+
+                                    </Grid>
+                                  
+                                </Grid>
+
+
+
+                                <Grid Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="8">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1.8*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <GroupBox Header="Unit Conversion" Height="120" Margin="0 0 15 0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="0.8*"/>
+                                                <RowDefinition/>
+                                                <RowDefinition Height="0.5*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Text="Unit" HorizontalAlignment="Center"/>
+                                            <TextBox Grid.Row="1" Name="unit2" HorizontalContentAlignment="Center" Margin="5 0" IsReadOnly="True"/>
+
+                                            <Button Grid.Row="1" Grid.Column="1" Content="..." VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF838F99" Click="Unit1_Button"/>
+                                            
+                                            <TextBlock Grid.Column="2" Text= " = " HorizontalAlignment="Center" Grid.RowSpan="2" VerticalAlignment="Center"/>
+
+                                            <TextBlock Text="Qty" HorizontalAlignment="Center" Grid.Column="3"/>
+                                            <TextBox Grid.Row="1" Name="ConvUnit2" Grid.Column="3" TextAlignment="Center" Margin="5 0" PreviewTextInput="NumberValidationTextBox" PreviewKeyDown="NeglectWhiteSpace"  HorizontalContentAlignment="Center" />
+
+                                            <TextBlock Text="Unit" HorizontalAlignment="Center" Grid.Column="5" Visibility="Hidden"/>
+                                            <TextBox Grid.Column="4" Grid.Row="1" Margin="5 0" Name="unit_txt1" IsReadOnly="True" HorizontalContentAlignment="Center"/>
+
+                                            <Button Grid.Row="1" Grid.Column="5" Content="..." VerticalAlignment="Center" HorizontalAlignment="Center" Background="#FF838F99" Click="Unit2_Button"/>
+                                            
+                                        </Grid>
+                                    </GroupBox>
+
+                                    <GroupBox Name="Unit_Conversion2" Visibility="Hidden" Header="Unit Conversion 2" Grid.Column="1" Height="110" Margin="5 0 0 0">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="0.8*"/>
+                                                <RowDefinition/>
+                                                <RowDefinition Height="0.5*"/>
+                                            </Grid.RowDefinitions>
+
+                                            <!--<Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>-->
+
+                                            <TextBlock Text="Unit" HorizontalAlignment="Center"/>
+                                            <TextBox Grid.Row="1"   Margin="10 0" Name="unit3" TextAlignment="Center"  />
+
+                                            <!--<TextBlock Grid.Column="1" Text= " = " HorizontalAlignment="Center" Grid.RowSpan="2" VerticalAlignment="Center"/>-->
+
+                                            <!--<TextBlock Text="Qty" HorizontalAlignment="Center" Grid.Column="2"/>
+                                                <TextBox Grid.Row="1" Name="ConvUnit3" Grid.Column="2" TextAlignment="Center" Margin="5 0" PreviewTextInput="NumberValidationTextBox" PreviewKeyDown="NeglectWhiteSpace"  HorizontalContentAlignment="Center" />-->
+
+                                            <!--<TextBlock Text="Unit" HorizontalAlignment="Center" Grid.Column="3" Visibility="Hidden"/>
+                                                <TextBlock Grid.Column="3" Grid.Row="1" Margin="5 0" Name="unit_txt2" TextAlignment="Center"/>-->
+                                        </Grid>
+                                    </GroupBox>
+                                </Grid>
+
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+
+                    <Grid Name="CategoryGroupBox" Visibility="Hidden">
+                        <GroupBox  BorderBrush="#D0D3D4" Header="Category" TextBlock.FontSize="20" TextBlock.FontWeight="Bold">
+                            <Grid  TextBlock.FontWeight="Normal" TextBlock.Foreground="Black" TextBlock.FontSize="13" >
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*" />
+                                    <RowDefinition Height="2*" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Code: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Name="CategoryCodetxt" Grid.Column="1" Margin="0 0 10 10" VerticalAlignment="Center" IsEnabled="False"/>
+
+                                <TextBlock Text="ID: " Grid.Column="2" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" Visibility="Hidden"/>
+                                <TextBox Name="CategoryIDtxt" Grid.Column="3" Margin="0 0 10 10" VerticalAlignment="Center" Visibility="Hidden"/>
+
+                                <TextBlock Grid.Row="1" Text="Name1: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" Name="CategoryName" Margin="0 0 10 10" VerticalAlignment="Center" />
+
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="Name2: "  FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                                <TextBox Name="CategoryName2" Grid.Row="1" Grid.Column="3" Margin="0 0 10 10" VerticalAlignment="Center" />
+
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+
+                    <Grid Name="DepartmentGroupBox" Visibility="Hidden">
+                        <GroupBox  IsEnabled="True" BorderBrush="#D0D3D4" Header="Department" TextBlock.FontSize="20" TextBlock.FontWeight="Bold">
+                            <Grid  TextBlock.FontWeight="Normal" TextBlock.Foreground="Black" TextBlock.FontSize="13" >
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*" />
+                                    <RowDefinition Height="2*" />
+                                    <RowDefinition Height="2*" />
+                                    <RowDefinition Height="2*" />
+
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Code: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Name="depCodetxt" Grid.Column="1" Margin="0 0 10 10" VerticalAlignment="Center" IsEnabled="False" />
+
+                                <TextBlock Grid.Column="2" Text="ID: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" Visibility="Hidden"/>
+                                <TextBox Name="depIDtxt" Grid.Column="3" Margin="0 0 10 10" VerticalAlignment="Center" Visibility="Hidden"/>
+
+                                <TextBlock  Text="Name1: " Grid.Row="1" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Name="depNametxt" Grid.Row="1" Grid.Column="1" Margin="0 0 10 10" VerticalAlignment="Center" />
+
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="Name2: "  FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                                <TextBox Name="depName2txt" Grid.Row="1" Grid.Column="3" Margin="0 0 10 10" VerticalAlignment="Center" />
+
+                                <TextBlock Grid.Row="2"  VerticalAlignment="Center" Text="Description" FontSize="13" HorizontalAlignment="Center" Foreground="Black"/>
+                                <TextBox Name="depDescriptiontxt" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="10" FontSize="13" Foreground="Black" BorderBrush="Black" BorderThickness="1" TextWrapping="Wrap" AcceptsReturn="True"  VerticalContentAlignment="Top"/>
+                                
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+
+                    <Grid Name="ClassGroupBox" Visibility="Hidden">
+                        <GroupBox  IsEnabled="True" BorderBrush="#D0D3D4" Header="Class" TextBlock.FontSize="20" TextBlock.FontWeight="Bold" >
+                            <Grid  TextBlock.FontWeight="Normal" TextBlock.Foreground="Black" TextBlock.FontSize="13">
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="2*"/>
+                                    <RowDefinition Height="2*"/>
+
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Code: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Name="classCodetxt" Grid.Column="1" Margin="0 0 10 10" VerticalAlignment="Center" IsEnabled="False" />
+
+                                <TextBlock Grid.Column="2" Text="ID: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" Visibility="Hidden"/>
+                                <TextBox Name="classIDtxt" Grid.Column="3" Margin="0 0 10 10" VerticalAlignment="Center" Visibility="Hidden"/>
+
+                                <TextBlock Grid.Row="1" Text="Name: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Name="classNametxt" Grid.Row="1" Grid.Column="1" Margin="0 0 10 10" VerticalAlignment="Center" />
+
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="Name2: "  FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                                <TextBox Name="className2txt" Grid.Row="1" Grid.Column="3" Margin="0 0 10 10" VerticalAlignment="Center" />
+
+                                <TextBlock Grid.Row="2"  VerticalAlignment="Center" Text="Description" FontSize="13" HorizontalAlignment="Center" Foreground="Black"/>
+                                <TextBox Name="classDesctxt" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="10" FontSize="13" Foreground="Black" BorderBrush="Black" BorderThickness="1" TextWrapping="Wrap" AcceptsReturn="True"  VerticalContentAlignment="Top"/>
+
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+
+                    <Grid Name="SubClassGroupBox" Visibility="Hidden">
+                        <GroupBox IsEnabled="True" BorderBrush="#D0D3D4" Header="Sub Class" TextBlock.FontSize="20" TextBlock.FontWeight="Bold" >
+                            <Grid  TextBlock.FontWeight="Normal" TextBlock.Foreground="Black" TextBlock.FontSize="13" >
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="2*" />
+                                    <RowDefinition Height="2*" />
+                                    <RowDefinition Height="2*" />
+                                    <RowDefinition Height="2*" />
+
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="Code: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Name="subclassCodetxt" Grid.Column="1" Margin="0 0 10 10" VerticalAlignment="Center" IsEnabled="False"/>
+
+                                <TextBlock Grid.Column="2" Text="ID: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" Visibility="Hidden"/>
+                                <TextBox Name="subclassIDtxt" Grid.Column="3" Margin="0 0 10 10" VerticalAlignment="Center" Visibility="Hidden"/>
+
+                                <TextBlock Grid.Row="1" Text="Name: " FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red"/>
+                                <TextBox Grid.Row="1" Name="subclassNametxt" Grid.Column="1" Margin="0 0 10 10" VerticalAlignment="Center" />
+
+                                <TextBlock Grid.Row="1" Grid.Column="2" Text="Name2: "  FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                                <TextBox Name="subclassName2txt" Grid.Row="1" Grid.Column="3" Margin="0 0 10 10" VerticalAlignment="Center" />
+
+                                <TextBlock Grid.Row="2"  VerticalAlignment="Center" Text="Description" FontSize="13" HorizontalAlignment="Center" Foreground="Black"/>
+                                <TextBox Name="subclassDesctxt" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="10" FontSize="13" Foreground="Black" BorderBrush="Black" BorderThickness="1" TextWrapping="Wrap" AcceptsReturn="True"  VerticalContentAlignment="Top"/>
+
+                            </Grid>
+                        </GroupBox>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

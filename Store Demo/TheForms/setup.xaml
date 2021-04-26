@@ -1,0 +1,39 @@
+﻿<Window x:Class="Food_Cost.setup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Food_Cost" mc:Ignorable="d" 
+        Title="setup" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  >
+    <TabControl >
+        <TabItem Header="Application" FontSize="15">
+            <UniformGrid Rows="2" Columns="3">
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Click="Button_Click" Content="station setup" HorizontalContentAlignment="Center"/>
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Click="Button_Click_1" Content=" fiscal period"/>
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Click="GenerateBatchBtn" Content="Generate Batch (Recipes)"/>
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Click="PO_ROSetup" Content="Purchasing and Reciving Setup"/>
+            </UniformGrid>
+        </TabItem>
+
+        <TabItem Header="Items" FontSize="15">
+            <UniformGrid Rows="2" Columns="3">
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Content="Setup Items Definition" Click="Button_Click_3" HorizontalContentAlignment="Center"/>
+                
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Content="cost calculation" HorizontalContentAlignment="Center"/>
+
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Content=" close month" Click="Button_Click_2"/>
+            </UniformGrid>
+        </TabItem>
+
+        <TabItem Header="Setup" FontSize="15">
+            <UniformGrid Rows="2" Columns="3">
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Click="Connection_Click" Content="Connection String"/>
+
+                <Button Margin="10" Height="100" Background="Transparent" Foreground="Black" FontSize="14" Click="Reports_Click" Content=" reports"/>
+            </UniformGrid>
+        </TabItem>
+    </TabControl>
+
+
+</Window>
