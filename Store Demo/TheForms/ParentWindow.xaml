@@ -6,23 +6,52 @@
         xmlns:local="clr-namespace:Food_Cost"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="ParentWindow" Height="600" Width="650">
-    
-    <Grid Name="MainGrid">
-        <Grid Name="ParentGrid" Visibility="Visible">
+    <Grid>
+        <Grid Name="AllItemsView" Visibility="Hidden">
             <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="8*"></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="8*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Search" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#566573"/>
+                <TextBox Name="SearchTxt" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" TextChanged="SearchTxt_TextChanged" ></TextBox>
+                <RadioButton Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Name="RadioByCode">By Code</RadioButton>
+                <RadioButton Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Name="RadioByName">By Name</RadioButton>
+            </Grid>
+
+            <DataGrid  x:Name="ItemsDGV" Grid.Row="1" ItemsSource="{Binding}"  CanUserAddRows="False" ColumnWidth="*" VerticalAlignment="Stretch"  ScrollViewer.CanContentScroll="True" 
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"  ScrollViewer.HorizontalScrollBarVisibility="Auto" IsReadOnly="True"
+                           MouseDoubleClick="ItemsDGV_MouseDoubleClick" Visibility="Hidden"/>
+
+            <Button Grid.Row="2" Background="Gray"  Margin="5" Click="BackClickBtn">
+                <StackPanel Orientation="Horizontal" >
+                    <materialDesign:PackIcon Kind="Backpack"  />
+                    <TextBlock  HorizontalAlignment="Right"> Back</TextBlock>
+                </StackPanel>
+            </Button>
+        </Grid>
+        <Grid Name="ParentItemsView">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
-            <TextBlock Grid.ColumnSpan="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"> Item Name :</TextBlock>
-            <TextBox Grid.Column="2"  VerticalAlignment="Center" Name="ItemNametxt" Grid.ColumnSpan="2" Margin="0 0 50 0"/>
+
+            <TextBlock Grid.Column="1" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"> Item Name :</TextBlock>
+            <TextBox Grid.Column="2"  VerticalAlignment="Center" Name="ItemNametxt"/>
 
             <DataGrid Grid.Row="1" Grid.ColumnSpan="4" CanUserAddRows="True"  x:Name="ParentItemsDGV" 
                 AutoGenerateColumns="True"  ColumnWidth="*" VerticalAlignment="Stretch"  ScrollViewer.CanContentScroll="True" 
@@ -47,7 +76,7 @@
             <Button  Background="Blue" Margin="5" ToolTip="Cancel"  Grid.Row="2" Grid.Column="3" Click="CancelBtn_Click">
                 <StackPanel Orientation="Horizontal" >
                     <materialDesign:PackIcon Kind="Cancel"/>
-                    <TextBlock  HorizontalAlignment="Right"> Cancel </TextBlock>
+                    <TextBlock  HorizontalAlignment="Right"> Cancel</TextBlock>
                 </StackPanel>
             </Button>
 
@@ -57,42 +86,8 @@
                     <TextBlock  HorizontalAlignment="Right"> Delete</TextBlock>
                 </StackPanel>
             </Button>
-        </Grid>
-        
-        <Grid Name="ShowItems" Visibility="Hidden">
-            <Border>
-                <StackPanel>
-                    <Grid>
-                        <StackPanel  Grid.Column="1">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="3*"></ColumnDefinition>
-                                    <ColumnDefinition Width="12*"></ColumnDefinition>
-                                    <ColumnDefinition Width="4*"></ColumnDefinition>
-                                    <ColumnDefinition Width="4*"></ColumnDefinition>
-                                    <ColumnDefinition Width="4*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
 
-                                <materialDesign:PackIcon Grid.Column="0" Kind="Database" Foreground="#566573" Height="28" Width="30" Margin="3"/>
-                                <TextBlock Text="Items" Margin="0 5"  Grid.Column="1" FontWeight="Bold" Foreground="#566573" FontSize="15"  />
-                                <TextBlock Text="Search" Margin="0 5"  Grid.Column="2" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#566573" FontSize="15"  />
-                                <TextBox Name="SearchTxt" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" FontSize="12" TextChanged="TextDataChange"  ></TextBox>
-                                <RadioButton Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Name="RadioByCode">By Code</RadioButton>
-                                <RadioButton Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Name="RadioByName">By Name</RadioButton>
-
-                            </Grid>
-                            
-                          <DataGrid  x:Name="ItemsDGV" ItemsSource="{Binding}"   AutoGenerateColumns="True"  ColumnWidth="*" VerticalAlignment="Stretch"  ScrollViewer.CanContentScroll="True" 
-                          ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                          Height="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}}, Path=ActualHeight}" MouseDoubleClick="ItemsDGV_MouseDoubleClick"
-                          IsReadOnly="True" HorizontalContentAlignment="Center"/>
-                            <!--MouseLeftButtonUp="ItemsDGV_MouseLeftButtonUp"-->
-                        </StackPanel>
-                    </Grid>
-                </StackPanel>
-            </Border>
         </Grid>
     </Grid>
-    
+
 </Window>

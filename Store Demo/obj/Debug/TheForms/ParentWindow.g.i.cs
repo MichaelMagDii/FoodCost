@@ -46,45 +46,13 @@ namespace Food_Cost {
         
         #line 10 "..\..\..\TheForms\ParentWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Grid MainGrid;
+        internal System.Windows.Controls.Grid AllItemsView;
         
         #line default
         #line hidden
         
         
-        #line 11 "..\..\..\TheForms\ParentWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Grid ParentGrid;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 25 "..\..\..\TheForms\ParentWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox ItemNametxt;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 27 "..\..\..\TheForms\ParentWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DataGrid ParentItemsDGV;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 62 "..\..\..\TheForms\ParentWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Grid ShowItems;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 80 "..\..\..\TheForms\ParentWindow.xaml"
+        #line 24 "..\..\..\TheForms\ParentWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox SearchTxt;
         
@@ -92,7 +60,7 @@ namespace Food_Cost {
         #line hidden
         
         
-        #line 81 "..\..\..\TheForms\ParentWindow.xaml"
+        #line 25 "..\..\..\TheForms\ParentWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.RadioButton RadioByCode;
         
@@ -100,7 +68,7 @@ namespace Food_Cost {
         #line hidden
         
         
-        #line 82 "..\..\..\TheForms\ParentWindow.xaml"
+        #line 26 "..\..\..\TheForms\ParentWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.RadioButton RadioByName;
         
@@ -108,9 +76,33 @@ namespace Food_Cost {
         #line hidden
         
         
-        #line 86 "..\..\..\TheForms\ParentWindow.xaml"
+        #line 29 "..\..\..\TheForms\ParentWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGrid ItemsDGV;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 40 "..\..\..\TheForms\ParentWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Grid ParentItemsView;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 54 "..\..\..\TheForms\ParentWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox ItemNametxt;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 56 "..\..\..\TheForms\ParentWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.DataGrid ParentItemsDGV;
         
         #line default
         #line hidden
@@ -146,72 +138,77 @@ namespace Food_Cost {
             switch (connectionId)
             {
             case 1:
-            this.MainGrid = ((System.Windows.Controls.Grid)(target));
+            this.AllItemsView = ((System.Windows.Controls.Grid)(target));
             return;
             case 2:
-            this.ParentGrid = ((System.Windows.Controls.Grid)(target));
+            this.SearchTxt = ((System.Windows.Controls.TextBox)(target));
+            
+            #line 24 "..\..\..\TheForms\ParentWindow.xaml"
+            this.SearchTxt.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.SearchTxt_TextChanged);
+            
+            #line default
+            #line hidden
             return;
             case 3:
-            this.ItemNametxt = ((System.Windows.Controls.TextBox)(target));
+            this.RadioByCode = ((System.Windows.Controls.RadioButton)(target));
             return;
             case 4:
-            this.ParentItemsDGV = ((System.Windows.Controls.DataGrid)(target));
+            this.RadioByName = ((System.Windows.Controls.RadioButton)(target));
             return;
             case 5:
+            this.ItemsDGV = ((System.Windows.Controls.DataGrid)(target));
             
-            #line 33 "..\..\..\TheForms\ParentWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.AddBtn_Click);
+            #line 31 "..\..\..\TheForms\ParentWindow.xaml"
+            this.ItemsDGV.MouseDoubleClick += new System.Windows.Input.MouseButtonEventHandler(this.ItemsDGV_MouseDoubleClick);
             
             #line default
             #line hidden
             return;
             case 6:
             
-            #line 40 "..\..\..\TheForms\ParentWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.SaveBtn_Click);
+            #line 33 "..\..\..\TheForms\ParentWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.BackClickBtn);
             
             #line default
             #line hidden
             return;
             case 7:
-            
-            #line 47 "..\..\..\TheForms\ParentWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.CancelBtn_Click);
-            
-            #line default
-            #line hidden
+            this.ParentItemsView = ((System.Windows.Controls.Grid)(target));
             return;
             case 8:
-            
-            #line 54 "..\..\..\TheForms\ParentWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.DeleteBtn_Click);
-            
-            #line default
-            #line hidden
+            this.ItemNametxt = ((System.Windows.Controls.TextBox)(target));
             return;
             case 9:
-            this.ShowItems = ((System.Windows.Controls.Grid)(target));
+            this.ParentItemsDGV = ((System.Windows.Controls.DataGrid)(target));
             return;
             case 10:
-            this.SearchTxt = ((System.Windows.Controls.TextBox)(target));
             
-            #line 80 "..\..\..\TheForms\ParentWindow.xaml"
-            this.SearchTxt.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.TextDataChange);
+            #line 62 "..\..\..\TheForms\ParentWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.AddBtn_Click);
             
             #line default
             #line hidden
             return;
             case 11:
-            this.RadioByCode = ((System.Windows.Controls.RadioButton)(target));
+            
+            #line 69 "..\..\..\TheForms\ParentWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.SaveBtn_Click);
+            
+            #line default
+            #line hidden
             return;
             case 12:
-            this.RadioByName = ((System.Windows.Controls.RadioButton)(target));
+            
+            #line 76 "..\..\..\TheForms\ParentWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.CancelBtn_Click);
+            
+            #line default
+            #line hidden
             return;
             case 13:
-            this.ItemsDGV = ((System.Windows.Controls.DataGrid)(target));
             
-            #line 88 "..\..\..\TheForms\ParentWindow.xaml"
-            this.ItemsDGV.MouseDoubleClick += new System.Windows.Input.MouseButtonEventHandler(this.ItemsDGV_MouseDoubleClick);
+            #line 83 "..\..\..\TheForms\ParentWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.DeleteBtn_Click);
             
             #line default
             #line hidden

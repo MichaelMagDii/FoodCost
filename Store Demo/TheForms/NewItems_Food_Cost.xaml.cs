@@ -1592,7 +1592,7 @@ namespace Food_Cost
 
             if ((sender as CheckBox).IsChecked == true)
             {
-                ParentWindow parentWindow = new ParentWindow(Codetxt.Text);
+                ParentWindow parentWindow = new ParentWindow(Codetxt.Text,Name1txt.Text);
                 parentWindow.ShowDialog();
             }
         }     //Done

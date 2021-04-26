@@ -1,1 +1,1 @@
-Data Source=.;Initial Catalog=PizzaClubFoodCost;Integrated Security=True;User Id=sa;Password=CounterPoint8
+Data Source=.;Initial Catalog=Catering;Integrated Security=True;User Id=sa;Password=CounterPoint8
