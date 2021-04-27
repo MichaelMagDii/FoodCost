@@ -65,8 +65,8 @@
 
             </Grid>
 
-            <DataGrid Grid.Row="2" Name="ItemsofBulkItemsDGV" IsReadOnly="True" BorderBrush="Black" BorderThickness="1" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding}" AutoGenerateColumns="True" ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                                  ScrollViewer.CanContentScroll="True" CanUserAddRows="False" PreviewTextInput="NumberValidationTextBox"  PreviewKeyDown="NeglectWhiteSpace" Visibility="Hidden" ColumnWidth="*" Margin="5">
+            <DataGrid Grid.Row="2" Name="ItemsofBulkItemsDGV" BorderBrush="Black" BorderThickness="1" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding}" AutoGenerateColumns="True" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                  ScrollViewer.CanContentScroll="True" CanUserAddRows="False" PreviewTextInput="NumberValidationTextBox"  PreviewKeyDown="NeglectWhiteSpace" Visibility="Hidden" ColumnWidth="*" Margin="5" CellEditEnding="ItemsofBulkItemsDGV_CellEditEnding">
             </DataGrid>
         </Grid>
 
