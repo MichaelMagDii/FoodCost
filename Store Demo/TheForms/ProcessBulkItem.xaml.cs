@@ -193,17 +193,20 @@ namespace Food_Cost
         }
         private bool CheckToSave()
         {
+
             double TotalCostPrecentage = 0, TotalWeightPrecentage = 0;
             DataTable DT = new DataTable();
             DT = ItemsofBulkItemsDGV.DataContext as DataTable;
             for (int i = 0; i < DT.Rows.Count; i++)
             {
-                TotalWeightPrecentage = Convert.ToDouble(DT.Rows[i]["Weight Precentage"]);
-                TotalCostPrecentage = Convert.ToDouble(DT.Rows[i]["Cost Precentage"]);
+                TotalWeightPrecentage += Convert.ToDouble(DT.Rows[i]["Weight Precentage"]);
+                TotalCostPrecentage += Convert.ToDouble(DT.Rows[i]["Cost Precentage"]);
             }
             if (TotalWeightPrecentage != 100 || TotalCostPrecentage != 100)
+            {
+                MessageBox.Show("Please Check the Data First !!");
                 return false;
-
+            }
             return true;
         }
         private void BulkItemsBtn_Click(object sender, RoutedEventArgs e)
@@ -213,109 +216,63 @@ namespace Food_Cost
             { LogIn logIn = new LogIn(); logIn.ShowDialog(); }
             else
             {
-                if(!)
-            }
-            //
-            if (Authenticated.IndexOf("DoProcessBulk") == -1 && Authenticated.IndexOf("CheckAllBulk") == -1)
-            { LogIn logIn = new LogIn(); logIn.ShowDialog();  }
-            else
-            {
-                string ID = Classes.InCrementTransactionSerial("Process_BulkItems", "ProcessBulk_ID");
-                string BaseCode = ""; string BaseQty = ""; string SUBQty = ""; double BaseCost = 0; string BaseWeight = "";  double CalcQty = 0; double CalcCost = 0;
-                SqlConnection con = new SqlConnection(Classes.DataConnString);
-                SqlCommand cmd = new SqlCommand();
-                SqlConnection con2 = new SqlConnection(Classes.DataConnString);
-                SqlCommand cmd2 = new SqlCommand();
-                SqlDataReader reader = null;
-                for (int i = 0; i < ItemsDGV.Items.Count; i++)
+                if (CheckToSave())
                 {
-                    if (((DataRowView)ItemsDGV.Items[i]).Row.ItemArray[0].ToString() == "True")
+                    try 
                     {
-                        BaseCode = ((DataRowView)ItemsDGV.Items[i]).Row.ItemArray[1].ToString();
-                        BaseQty = ((DataRowView)ItemsDGV.Items[i]).Row.ItemArray[4].ToString();
-                        SUBQty = BaseQty;
-                        BaseCost = Convert.ToDouble(((DataRowView)ItemsDGV.Items[i]).Row.ItemArray[6].ToString());
-                        BaseWeight = (Classes.RetrieveData("Weight", "Code='" + BaseCode +"'", "Setup_Items")).Rows[0][0].ToString();
-                        con.Open();
-                        try
+                        string BulkItemID = "", BulkItemWeight = "", BulkItemCost = "", w = "";
+                        BulkItemID = ((DataRowView)ItemsDGV.SelectedItem).Row.ItemArray[0].ToString();
+                        BulkItemWeight = ((DataRowView)ItemsDGV.SelectedItem).Row.ItemArray[3].ToString();
+                        BulkItemCost = ((DataRowView)ItemsDGV.SelectedItem).Row.ItemArray[5].ToString();
+                        SqlConnection con = new SqlConnection(Classes.DataConnString);
+                        SqlCommand cmd = new SqlCommand();
+                        DataTable DT = new DataTable();
+                        DT = ItemsofBulkItemsDGV.DataContext as DataTable;
+                        string ID = Classes.InCrementTransactionSerial("Process_BulkItems", "ProcessBulk_ID");
+                        for (int i = 0; i < DT.Rows.Count; i++)
                         {
-                            string s = string.Format("select * from Setup_BulkItems where Item_Code='{0}'", BaseCode);
-                            cmd = new SqlCommand(s, con);
-                            reader = cmd.ExecuteReader();
-                            while (reader.Read())
+                            con.Open();
+                            w = string.Format("UPDATE Items set Qty=Qty+{0},Last_Cost=Current_Cost,Current_Cost=(((Qty*Current_Cost)+({0}*{4}))/(Qty+{0})) where ItemID='{1}' and RestaurantID={2} and KitchenID={3}", DT.Rows[i]["Weight"], DT.Rows[i]["Code"], CodeOfResturant, CodeOfKitchens, DT.Rows[i]["Cost"]);
+                            cmd = new SqlCommand(w, con);
+                            int n = cmd.ExecuteNonQuery();
+                            if (n == 0)
                             {
-                                CalcQty = (((Convert.ToDouble(reader["WeightPrecentage"]) / 100) * Convert.ToDouble(BaseQty)) / Convert.ToDouble(BaseWeight));
-                                CalcCost = (((Convert.ToDouble(reader["CostPrecentage"]) / 100)  * Convert.ToDouble(BaseCost)) / Convert.ToDouble(BaseWeight));
-                                try
-                                {
-                                    con2.Open();
-                                    string w = string.Format("UPDATE Items set Qty=Qty+{0},Last_Cost=Current_Cost,Current_Cost=(((Qty*Current_Cost)+({0}*{4}))/(Qty+{0})) where ItemID='{1}' and RestaurantID={2} and KitchenID={3}", CalcQty, reader["Code"], CodeOfResturant, CodeOfKitchens, CalcCost);
-                                    cmd2 = new SqlCommand(w, con2);
-                                    int n = cmd2.ExecuteNonQuery();
-                                    if (n == 0)
-                                    {
-                                        w = string.Format("insert into Items(RestaurantID,KitchenID,ItemID,Qty,Current_Cost,Net_Cost) values({0},{1},'{2}',{3},{4},{5})", CodeOfResturant, CodeOfKitchens, reader["Code"], CalcQty, CalcCost, CalcCost * CalcQty);
-                                        cmd2 = new SqlCommand(w, con2);
-                                        cmd2.ExecuteNonQuery();
-                                    }
-
-                                    w = string.Format("Update ItemsYear set {0}={0}+{2},{1}=(({0}*{1})+({2}*{3})/({0}+{1})) where ItemID='{4}' and Restaurant_ID='{5}' and Kitchen_ID='{6}' and Year='{7}'", MainWindow.MonthQty,MainWindow.MonthCost,CalcQty,CalcCost, reader["Code"], CodeOfResturant, CodeOfKitchens, MainWindow.CurrentYear);
-                                    cmd2 = new SqlCommand(w, con2);
-                                    n = cmd2.ExecuteNonQuery();
-                                    if (n == 0)
-                                    {
-                                        w = string.Format("insert into ItemsYear(ItemID,Restaurant_ID,Kitchen_ID,Year,{0},{1}) values('{2}','{3}','{4}','{5}',{6},{7})", MainWindow.MonthQty,MainWindow.MonthCost,reader["Code"], CodeOfResturant, CodeOfKitchens, MainWindow.CurrentYear,CalcQty, CalcCost);
-                                        cmd2 = new SqlCommand(w, con2);
-                                        cmd2.ExecuteNonQuery();
-                                    }
-                                }
-                                catch (Exception ex) { MessageBox.Show(ex.ToString()); }
-                                SUBQty = (Convert.ToDouble(SUBQty) - CalcQty).ToString();
-
-                                try
-                                {
-                                    string w = string.Format("insert into Process_BulkItems_Items(ProcessBulk_ID,ParentItem_ID,ParentQty,ParentCost,ChiledItem_ID,ChiledQty,ChiledCost) values('{0}','{1}',{2},{3},{4},{5},{6})", ID, BaseCode, ((DataRowView)ItemsDGV.Items[i]).Row.ItemArray[4].ToString(), ((DataRowView)ItemsDGV.Items[i]).Row.ItemArray[6].ToString(), reader["Code"], BaseCost, BaseCost);
-                                    cmd2 = new SqlCommand(w, con2);
-                                    cmd2.ExecuteNonQuery();
-                                }
-                                catch (Exception ex) { MessageBox.Show(ex.ToString()); }
-                                con2.Close();
-
+                                w = string.Format("insert into Items(RestaurantID,KitchenID,ItemID,Qty,Current_Cost,Net_Cost) values({0},{1},'{2}',{3},{4},{5})", CodeOfResturant, CodeOfKitchens, DT.Rows[i]["Code"], DT.Rows[i]["Weight"], DT.Rows[i]["Cost"], Convert.ToDouble(DT.Rows[i]["Cost"]) * Convert.ToDouble(DT.Rows[i]["Weight"]));
+                                cmd = new SqlCommand(w, con);
+                                cmd.ExecuteNonQuery();
                             }
-                            try
+
+                            w = string.Format("Update ItemsYear set {0}={0}+{2},{1}=(({0}*{1})+({2}*{3})/({0}+{1})) where ItemID='{4}' and Restaurant_ID='{5}' and Kitchen_ID='{6}' and Year='{7}'", MainWindow.MonthQty, MainWindow.MonthCost, DT.Rows[i]["Weight"], DT.Rows[i]["Cost"], DT.Rows[i]["Code"], CodeOfResturant, CodeOfKitchens, MainWindow.CurrentYear);
+                            cmd = new SqlCommand(w, con);
+                            n = cmd.ExecuteNonQuery();
+                            if (n == 0)
                             {
-                                con2.Open();
-                                string w = string.Format("update Items set Qty={0} where RestaurantID={1} and KitchenID={2} and ItemID='{3}' ", SUBQty, CodeOfResturant, CodeOfKitchens, BaseCode);
-                                cmd2 = new SqlCommand(w, con2);
-                                cmd2.ExecuteNonQuery();
+                                w = string.Format("insert into ItemsYear(ItemID,Restaurant_ID,Kitchen_ID,Year,{0},{1}) values('{2}','{3}','{4}','{5}',{6},{7})", MainWindow.MonthQty, MainWindow.MonthCost, DT.Rows[i]["Code"], CodeOfResturant, CodeOfKitchens, MainWindow.CurrentYear, DT.Rows[i]["Weight"], DT.Rows[i]["Cost"]);
+                                cmd = new SqlCommand(w, con);
+                                cmd.ExecuteNonQuery();
                             }
-                            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
 
-                            try
-                            {
-                                string w = string.Format("update ItemsYear set {0}={1} Where ItemID='{2}' and Restaurant_ID='{3}' and Kitchen_ID='{4}' and Year='{5}'", MainWindow.MonthQty,SUBQty, BaseCode, CodeOfResturant, CodeOfKitchens, MainWindow.CurrentYear);
-                                cmd2 = new SqlCommand(w, con2);
-                                cmd2.ExecuteNonQuery();
-                            }
-                            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
-
-                            try
-                            {
-                                string w = string.Format("insert into Process_BulkItems(ProcessBulk_ID,Process_Date,User_ID,Resturant_ID,KitchenID,Post_Date) values('{0}',GETDATE(),'{1}',{2},{3},GETDATE())", ID, MainWindow.UserID, CodeOfResturant, CodeOfKitchens);
-                                cmd2 = new SqlCommand(w, con2);
-                                cmd2.ExecuteNonQuery();
-                            }
-                            catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+                            w = string.Format("insert into Process_BulkItems_Items(ProcessBulk_ID,ParentItem_ID,ParentQty,ParentCost,ChiledItem_ID,ChiledQty,ChiledCost) values('{0}','{1}',{2},{3},'{4}',{5},{6})", ID, BulkItemID, BulkItemWeight, BulkItemCost, DT.Rows[i]["Code"], DT.Rows[i]["Weight"], DT.Rows[i]["Cost"]);
+                            cmd = new SqlCommand(w, con);
+                            cmd.ExecuteNonQuery();
+                            con.Close();
                         }
-                        catch (Exception ex)
-                        {  MessageBox.Show(ex.ToString());  }
-                        con2.Close();
-                    }
-                }
-                MessageBox.Show("Done");
-            }
-            BulkItems.IsEnabled = false;
+                        con.Open();
+                        w = string.Format("update Items set Qty=0 where RestaurantID={0} and KitchenID={1} and ItemID='{2}' ", CodeOfResturant, CodeOfKitchens, BulkItemID);
+                        cmd = new SqlCommand(w, con);
+                        cmd.ExecuteNonQuery();
 
+                        w = string.Format("update ItemsYear set {0}={1} Where ItemID='{2}' and Restaurant_ID='{3}' and Kitchen_ID='{4}' and Year='{5}'", MainWindow.MonthQty, BulkItemWeight, BulkItemID, CodeOfResturant, CodeOfKitchens, MainWindow.CurrentYear);
+                        cmd = new SqlCommand(w, con);
+                        cmd.ExecuteNonQuery();
+
+                        w = string.Format("insert into Process_BulkItems(ProcessBulk_ID,Process_Date,User_ID,Resturant_ID,KitchenID,Post_Date) values('{0}',GETDATE(),'{1}',{2},{3},GETDATE())", ID, MainWindow.UserID, CodeOfResturant, CodeOfKitchens);
+                        cmd = new SqlCommand(w, con);
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.ToString()); }
+                }
+            }
         }           //Doen Finall Function
 
         
