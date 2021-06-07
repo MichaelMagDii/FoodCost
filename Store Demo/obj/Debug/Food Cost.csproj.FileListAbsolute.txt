@@ -4810,6 +4810,51 @@ C:\Users\Michael\Desktop\NewNewFoodCost\Food Cost\Store Demo\obj\Debug\Food Cost
 C:\Users\Michael\Desktop\NewNewFoodCost\Food Cost\Store Demo\obj\Debug\Food_Cost.exe.config
 C:\Users\Michael\Desktop\NewNewFoodCost\Food Cost\Store Demo\obj\Debug\Food Cost.csproj.CoreCompileInputs.cache
 C:\Users\Michael\Desktop\NewNewFoodCost\Food Cost\Store Demo\obj\Debug\Food Cost.csproj.CopyComplete
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.exe.config
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.exe.manifest
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.application
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.exe
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.pdb
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.VSDesigner.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.Web.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignColors.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CRVsPackageLib.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\EnvDTE.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\VSLangProj.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\VsWebSite.Interop.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\EnvDTE80.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\FlashControlV71.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\stdole.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\Food Cost.csprojAssemblyReference.cache
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\Food_Cost.exe.config
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\TheForms\RecieveOrder.baml
@@ -4865,46 +4910,6 @@ C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\TheForms\Vendors.g.cs
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\App.g.cs
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\Food_Cost_MarkupCompile.cache
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\Food_Cost_MarkupCompile.lref
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.exe.config
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.exe.manifest
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.application
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.exe
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Food_Cost.pdb
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.Shared.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.VSDesigner.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.Web.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CrystalDecisions.Windows.Forms.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignColors.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.Smo.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\CRVsPackageLib.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\EnvDTE.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\VSLangProj.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\VsWebSite.Interop.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\EnvDTE80.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\FlashControlV71.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.Dmf.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\stdole.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\ShockwaveFlashObjects.dll
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignColors.pdb
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.xml
-C:\Users\Michael\Desktop\Food Cost\Store Demo\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\App.baml
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\TheForms\AdjacmentInventory.baml
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\TheForms\AdjacmentsReasons.baml
@@ -4976,3 +4981,241 @@ C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\Food_Cost.application
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\Food Cost.csproj.CopyComplete
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\Food_Cost.exe
 C:\Users\Michael\Desktop\Food Cost\Store Demo\obj\Debug\Food_Cost.pdb
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Food_Cost.exe.config
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Food_Cost.exe.manifest
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Food_Cost.application
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Food_Cost.exe
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Food_Cost.pdb
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\ar-EG\Food_Cost.resources.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\en-US\Food_Cost.resources.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CrystalDecisions.ReportSource.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CrystalDecisions.Shared.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CrystalDecisions.VSDesigner.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CrystalDecisions.Web.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CrystalDecisions.Windows.Forms.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\MaterialDesignColors.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.Smo.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\WPFLocalizeExtension.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\XAMLMarkupExtensions.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\CRVsPackageLib.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\EnvDTE.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\VSLangProj.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\VsWebSite.Interop.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\EnvDTE80.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\FlashControlV71.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.Dmf.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\stdole.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\ShockwaveFlashObjects.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\MaterialDesignColors.pdb
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\WPFLocalizeExtension.pdb
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\WPFLocalizeExtension.xml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\XAMLMarkupExtensions.pdb
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\XAMLMarkupExtensions.xml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food Cost.csprojAssemblyReference.cache
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.exe.config
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\RecieveOrder.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\NewItems_Food_Cost.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AdjacmentInventory.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AdjacmentsReasons.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllAdjacments.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllCategories.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllRecipes.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllSubCategories.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllUnits.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllVendor.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\All_Kitchens.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\All_Purchase_Orders.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\All_Resturants.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\BulkWindow.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\CategoriesAndSub.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Close_Month.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ConnectionString.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ExpireDate.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Fiscal_Period.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ItemsDefinitionSetup.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Language.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\LogIn.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ProcessBulkItem.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\RecieveOrder.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\SetupGenerateBtch.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\SetupPoRoMainRes.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\StockInventory.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\GenerateBatch.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\PhysicalInventory.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Items.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\KitcheItemsn.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Kitchens_Setup.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\MainWindow.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\NewItems_Food_Cost.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\OrderRequesation.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\OutletRecipeSubtraction.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ParentItemInRecipe.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ParentWindow.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\PurchaseOrder.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Recipes.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\setup.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Setup_Station.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Store_Setup.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Transfer_Kitchens.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Transfer_Resturant.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Units.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Unit_Picker.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\UserAuth.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Users.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Vendors.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\App.g.cs
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost_MarkupCompile.cache
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost_MarkupCompile.lref
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\App.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AdjacmentInventory.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AdjacmentsReasons.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllAdjacments.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllCategories.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllRecipes.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllSubCategories.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllUnits.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\AllVendor.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\All_Kitchens.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\All_Purchase_Orders.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\All_Resturants.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\BulkWindow.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\CategoriesAndSub.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Close_Month.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ConnectionString.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ExpireDate.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Fiscal_Period.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ItemsDefinitionSetup.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Language.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\LogIn.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ProcessBulkItem.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\SetupGenerateBtch.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\SetupPoRoMainRes.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\StockInventory.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\GenerateBatch.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\PhysicalInventory.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Items.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\KitcheItemsn.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Kitchens_Setup.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\MainWindow.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\OrderRequesation.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\OutletRecipeSubtraction.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ParentItemInRecipe.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\ParentWindow.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\PurchaseOrder.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Recipes.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\setup.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Setup_Station.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Store_Setup.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Transfer_Kitchens.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Transfer_Resturant.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Units.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Unit_Picker.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\UserAuth.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Users.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\TheForms\Vendors.baml
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.g.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.FrmSelection.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.ReportsForm.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Report.ReportView.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_BinCard.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_GeneratedRecipescs.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_InterKitchenTransfer.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_InventoryStats.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_MonthClosing.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_PurchaseItems.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_PurchaseOrder.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_ReceiveItems.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_ReceiveOrder.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_RecipesItemsView.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_StoresItems.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_TransferItems.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.Rpt_Vendors.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Properties.Resources.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Forms.UC_TVKitchens.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Properties.Resources.ar-EG.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.Properties.Resources.en-US.resources
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food Cost.csproj.GenerateResource.cache
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food Cost.csproj.CoreCompileInputs.cache
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\ar-EG\Food_Cost.resources.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\en-US\Food_Cost.resources.dll
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.exe.manifest
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.application
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food Cost.csproj.CopyComplete
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.exe
+E:\S-App\ABTech\Git\FoodCost\Store Demo\obj\Debug\Food_Cost.pdb
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\Food Cost.csproj.AssemblyReference.cache
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\Food_Cost.exe.config
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\RecieveOrder.baml
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\NewItems_Food_Cost.baml
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\AdjacmentInventory.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\AdjacmentsReasons.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\AllAdjacments.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\AllCategories.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\AllRecipes.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\AllSubCategories.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\AllUnits.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\AllVendor.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\All_Kitchens.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\All_Purchase_Orders.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\All_Resturants.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\BulkWindow.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\CategoriesAndSub.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Close_Month.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\ConnectionString.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\ExpireDate.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Fiscal_Period.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\ItemsDefinitionSetup.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Language.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\LogIn.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\ProcessBulkItem.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\RecieveOrder.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\SetupGenerateBtch.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\SetupPoRoMainRes.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Setups.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\StockInventory.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\GenerateBatch.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\PhysicalInventory.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Items.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\KitcheItemsn.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Kitchens_Setup.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\MainWindow.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\NewItems_Food_Cost.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\OrderRequesation.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\OutletRecipeSubtraction.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\ParentItemInRecipe.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\ParentWindow.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\PurchaseOrder.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Recipes.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\setup.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Setup_Station.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Store_Setup.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Transfer_Kitchens.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Transfer_Resturant.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Units.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Unit_Picker.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\UserAuth.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Users.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\TheForms\Vendors.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\App.g.cs
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\Food_Cost_MarkupCompile.cache
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\Food_Cost_MarkupCompile.lref
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\Food_Cost.exe
+C:\Users\micha\Desktop\FoodCost\Store Demo\obj\Debug\Food_Cost.pdb

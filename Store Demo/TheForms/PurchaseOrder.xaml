@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:Food_Cost" mc:Ignorable="d"
-            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+             xmlns:p ="clr-namespace:Food_Cost.Properties"   xmlns:local="clr-namespace:Food_Cost" mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <Grid Background="White" Margin="80 65 0 0">
         <Grid.RowDefinitions>
@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
 
         <Grid Name="MainGrid">
-            <GroupBox Header="P.O Info" Margin="10">
+            <GroupBox Header="{x:Static p:Resources.PO_Details}" Margin="10">
                 <Grid >
 
                     <Grid.ColumnDefinitions>
@@ -32,14 +32,14 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Text="P.O # *" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Text="{x:Static p:Resources.PO_Number}" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     <TextBox Grid.Column="1" VerticalAlignment="Center" Foreground="Black"  Name="Serial_PO_NO" TextAlignment="Center" IsReadOnly="True"/>
 
 
-                    <TextBlock Text="Manual P.O # *" Grid.Column="2" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Text="{x:Static p:Resources.Manual_PO}" Grid.Column="2" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     <TextBox Grid.Column="3" VerticalAlignment="Center" Foreground="Black"  Name="PO_NO" TextAlignment="Center" PreviewTextInput="NumberValidationTextBox" PreviewKeyDown="NeglectWhiteSpace"/>
 
-                    <TextBlock Text="Vendor *" Foreground="Red" Grid.Column="4" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{x:Static p:Resources.Vendor}" Foreground="Red" Grid.Column="4" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <Grid Grid.Column="5">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
@@ -54,7 +54,7 @@
 
                     </Grid>
 
-                    <TextBlock Text="Restaurant :" Grid.Row="1" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Text="{x:Static p:Resources.Restaurant}" Grid.Row="1" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     <Grid Grid.Column="1" Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
@@ -68,7 +68,7 @@
                         </Button>
                     </Grid>
 
-                    <TextBlock Text="Kitchen :" Grid.Row="1" Grid.Column="2" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{x:Static p:Resources.Kitchen}" Grid.Row="1" Grid.Column="2" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <Grid Grid.Column="3" Grid.Row="1">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
@@ -85,16 +85,16 @@
 
 
 
-                    <TextBlock Text="Request Date *" Grid.Column="4" Foreground="Red" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{x:Static p:Resources.Request_Date}" Grid.Column="4" Foreground="Red" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     <DatePicker Grid.Column="5" VerticalAlignment="Center" Grid.Row="1" Foreground="Black" Name="Delivery_dt" TextBlock.TextAlignment="Center" />
 
                     <TextBlock Text="Request Time" Grid.Row="2" Grid.Column="4" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden"/>
                     <materialDesign:TimePicker Grid.Column="5" VerticalAlignment="Center" Grid.Row="2" Foreground="Black" Name="Delivery_time" TextBlock.TextAlignment="Center" Visibility="Hidden" />
 
-                    <TextBlock Text="Comments" Foreground="Black" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 10 0 0"/>
+                    <TextBlock Text="{x:Static p:Resources.Comment}" Foreground="Black" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 10 0 0"/>
                     <TextBox Grid.Column="3" VerticalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="3" Foreground="Black" TextWrapping="Wrap" Padding="5 5 5 0" Name="commenttxt" Margin="5,40,-1.8,6.4" Grid.RowSpan="2"/>
 
-                    <TextBlock Name="Status" Text="Status : *" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" Margin="0 10 0 0" />
+                    <TextBlock Name="Status" Text="{x:Static p:Resources.Status}" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" Margin="0 10 0 0" />
                     <ComboBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Foreground="Black" Name="Statustxt" HorizontalContentAlignment="Center" Margin="0 0 0 0">
                         <ComboBoxItem IsSelected="True">Hold</ComboBoxItem>
                         <ComboBoxItem>Rejected</ComboBoxItem>

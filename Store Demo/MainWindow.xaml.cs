@@ -53,7 +53,7 @@ namespace Food_Cost
             //    return;
             //}
             Classes.UpdateDateFormat();
-
+            Classes.Language();
             //Calculation.Calculate();
             NameofForm.Text = "Food Cost";
             //int num = (DateTime.Now.Hour* DateTime.Now.Day) +0x21;

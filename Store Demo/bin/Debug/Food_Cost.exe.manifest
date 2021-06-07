@@ -199,14 +199,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Food_Cost.exe" size="10221568">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Food_Cost.exe" size="10230272">
       <assemblyIdentity name="Food_Cost" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>c71VvkBMuzQHLKRXCaBdvWh60Ug16m6/XnspFt+PHnc=</dsig:DigestValue>
+        <dsig:DigestValue>1qU0ENrlUzv3EgASPa8gs89HZ5ioPSikqxe14JtEhEE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ar-EG\Food_Cost.resources.dll" size="4096">
+      <assemblyIdentity name="Food_Cost.resources" version="1.0.0.0" language="ar-EG" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>g/Kzckn89GOy3ZTjgZTFo7jj4t5qiJ1f4mWavtbFT5o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="en-US\Food_Cost.resources.dll" size="4096">
+      <assemblyIdentity name="Food_Cost.resources" version="1.0.0.0" language="en-US" processorArchitecture="amd64" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dn7iGOTAeRTFs+N0S/Qy5y2KqAFW8IX5GIg53JErfEw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -435,6 +459,30 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>FSarS1gjvIi0mN6BY7MDvaKe8wEh4Wtp2wwo2N9JJVc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WPFLocalizeExtension.dll" size="89600">
+      <assemblyIdentity name="WPFLocalizeExtension" version="3.8.0.0" publicKeyToken="C726E0262981A1EB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>lmbXNU8HFNNHinEgecD27A3KpVLte51wiW+0mo3dZrE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="XAMLMarkupExtensions.dll" size="36864">
+      <assemblyIdentity name="XAMLMarkupExtensions" version="2.0.0.0" publicKeyToken="C726E0262981A1EB" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>NaUZXwqfud4gEsmCULXPTvIWjUxrMZqiqXTXlTNEYVQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

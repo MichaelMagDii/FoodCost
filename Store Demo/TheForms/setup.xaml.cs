@@ -116,5 +116,12 @@ namespace Food_Cost
             setupPOROMainRes.Owner = this;
             setupPOROMainRes.ShowDialog();
         }
+
+        private void Language(object sender, RoutedEventArgs e)
+        {
+            Language language = new Language();
+            language.Owner = this;
+            language.ShowDialog();
+        }
     }
 }

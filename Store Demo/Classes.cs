@@ -17,6 +17,7 @@ namespace Food_Cost
 {
     public class Classes
     {
+        public static string TheLanguage = "";
         public static string RestaurantId, KitchenId, WorkstationId;
         public static string WS;
         public static string IDs;
@@ -28,6 +29,26 @@ namespace Food_Cost
         public static string sysDateFormat;
         public static string sysDateTimeFormat;
 
+        public static void Language()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(DataConnString);
+                con.Open();
+                string s = "select Language from Setup_Code ";
+                SqlCommand cmd = new SqlCommand(s, con);
+                if (cmd.ExecuteScalar().ToString() == "Arabic")
+                {
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ar-EG");
+                    //CultureInfo.CurrentCulture.TextInfo.IsRightToLeft;
+                }
+                else
+                { System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US"); }
+                TheLanguage = cmd.ExecuteScalar().ToString();
+                con.Close();
+            }
+            catch { }
+        }
 
         public static void TheConnectionString()
         {
